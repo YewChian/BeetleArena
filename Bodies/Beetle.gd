@@ -17,6 +17,7 @@ func _ready():
 	enter_state(Wander)
 	$StateTimer.start(1)
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	match state:
