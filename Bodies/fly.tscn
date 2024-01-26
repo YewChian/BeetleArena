@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b725jq0jx1wbu"]
+
+[ext_resource type="PackedScene" uid="uid://cpkc2rctcbg64" path="res://Bodies/Beetle.tscn" id="1_0xjm0"]
+[ext_resource type="PackedScene" uid="uid://fw0pny7rgwss" path="res://Legs/bear_paws.tscn" id="2_snmvf"]
+[ext_resource type="PackedScene" uid="uid://bhgsphk3bsxcs" path="res://Mandibles/lobster.tscn" id="3_j2pjs"]
+
+[node name="Fly" instance=ExtResource("1_0xjm0")]
+
+[node name="Lobster" parent="Mandibles" index="0" instance=ExtResource("3_j2pjs")]
+z_index = -1
+
+[node name="BearPaws" parent="Legs" index="0" instance=ExtResource("2_snmvf")]
+z_index = -1

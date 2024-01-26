@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhgsphk3bsxcs"]
+
+[ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_cb1at"]
+[ext_resource type="Texture2D" uid="uid://7s3qjs2e2uge" path="res://Assets/Mandibles/Lobster.png" id="2_86auq"]
+
+[node name="Lobster" instance=ExtResource("1_cb1at")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_86auq")

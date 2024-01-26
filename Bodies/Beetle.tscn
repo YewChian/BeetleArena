@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpkc2rctcbg64"]
+
+[ext_resource type="Texture2D" uid="uid://cs8lva6k3e8jk" path="res://Assets/Fly.png" id="1_yhg6j"]
+[ext_resource type="Script" path="res://Bodies/Beetle.gd" id="1_yt4jj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2kle"]
+radius = 41.0
+height = 116.0
+
+[node name="Beetle" type="CharacterBody2D"]
+script = ExtResource("1_yt4jj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yhg6j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_a2kle")
+
+[node name="Mandibles" type="Node2D" parent="."]
+
+[node name="Legs" type="Node2D" parent="."]
+
+[node name="StateTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]
