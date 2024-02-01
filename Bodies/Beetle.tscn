@@ -8,6 +8,8 @@ radius = 41.0
 height = 116.0
 
 [node name="Beetle" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_yt4jj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,5 +23,9 @@ shape = SubResource("CapsuleShape2D_a2kle")
 [node name="Legs" type="Node2D" parent="."]
 
 [node name="StateTimer" type="Timer" parent="."]
+
+[node name="WallDetector" type="RayCast2D" parent="."]
+rotation = 3.14159
+target_position = Vector2(0, 160)
 
 [connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]

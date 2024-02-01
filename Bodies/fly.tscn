@@ -8,6 +8,10 @@
 
 [node name="Lobster" parent="Mandibles" index="0" instance=ExtResource("3_j2pjs")]
 z_index = -1
+collision_layer = 1
+collision_mask = 1
 
 [node name="BearPaws" parent="Legs" index="0" instance=ExtResource("2_snmvf")]
 z_index = -1
+collision_layer = 1
+collision_mask = 1
