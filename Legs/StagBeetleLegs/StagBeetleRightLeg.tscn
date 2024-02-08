@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://03jx71jb2mtw"]
+
+[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_5twaa"]
+[ext_resource type="Texture2D" uid="uid://6d1n3v5dldhq" path="res://Assets/Legs/StagBeetleLegs.png" id="2_sdn1o"]
+
+[node name="StagBeetleRightLeg" instance=ExtResource("1_5twaa")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(169, -71)
+texture = ExtResource("2_sdn1o")
+hframes = 2
+frame = 1

@@ -1,31 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpkc2rctcbg64"]
+[gd_scene load_steps=3 format=3 uid="uid://cpkc2rctcbg64"]
 
-[ext_resource type="Texture2D" uid="uid://cs8lva6k3e8jk" path="res://Assets/Fly.png" id="1_yhg6j"]
 [ext_resource type="Script" path="res://Bodies/Beetle.gd" id="1_yt4jj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2kle"]
-radius = 41.0
-height = 116.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qr2in"]
+radius = 47.0
+height = 94.0
 
 [node name="Beetle" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_yt4jj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_yhg6j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_a2kle")
-
 [node name="Mandibles" type="Node2D" parent="."]
 
-[node name="Legs" type="Node2D" parent="."]
+[node name="Carapace" type="Node2D" parent="."]
+
+[node name="RightLeg" type="Node2D" parent="."]
+position = Vector2(97, 61)
+
+[node name="LeftLeg" type="Node2D" parent="."]
+position = Vector2(-116, 57)
 
 [node name="StateTimer" type="Timer" parent="."]
 
-[node name="WallDetector" type="RayCast2D" parent="."]
-rotation = 3.14159
-target_position = Vector2(0, 160)
+[node name="WallDetector" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector"]
+position = Vector2(0, -64)
+shape = SubResource("CapsuleShape2D_qr2in")
+
+[node name="InvulnerableTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="End" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 1.0
+offset_right = 78.0
+offset_bottom = 24.0
+scale = Vector2(5, 5)
 
 [connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]
+[connection signal="body_entered" from="WallDetector" to="." method="_on_wall_detector_body_entered"]
+[connection signal="timeout" from="InvulnerableTimer" to="." method="_on_invulnerable_timer_timeout"]

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eiajh"]
 size = Vector2(241, 1231)
 
-[node name="LongBoulder" type="StaticBody2D"]
+[node name="LongBoulder" type="StaticBody2D" groups=["Wall"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-38.5, 1.5)

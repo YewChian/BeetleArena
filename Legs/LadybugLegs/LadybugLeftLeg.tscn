@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://casu874iwsjf8"]
+
+[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_eonsr"]
+[ext_resource type="Texture2D" uid="uid://whq1o6wafg26" path="res://Assets/Legs/LadybugLegs.png" id="2_pghkv"]
+
+[node name="LadybugLegLeft" instance=ExtResource("1_eonsr")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-135, -138)
+texture = ExtResource("2_pghkv")
+hframes = 2

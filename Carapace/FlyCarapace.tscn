@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs5olsf8xcf86"]
+
+[ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_qs0aj"]
+[ext_resource type="Texture2D" uid="uid://cs8lva6k3e8jk" path="res://Assets/Carapace/FlyCarapace.png" id="2_qrmwu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wlu5w"]
+radius = 19.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7f18"]
+radius = 22.0
+height = 60.0
+
+[node name="FlyCarapace" instance=ExtResource("1_qs0aj")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_qrmwu")
+
+[node name="Skeleton" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_wlu5w")
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource("CapsuleShape2D_x7f18")

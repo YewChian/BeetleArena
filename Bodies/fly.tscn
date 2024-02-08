@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://b725jq0jx1wbu"]
+[gd_scene load_steps=7 format=3 uid="uid://b725jq0jx1wbu"]
 
 [ext_resource type="PackedScene" uid="uid://cpkc2rctcbg64" path="res://Bodies/Beetle.tscn" id="1_0xjm0"]
-[ext_resource type="PackedScene" uid="uid://fw0pny7rgwss" path="res://Legs/bear_paws.tscn" id="2_snmvf"]
+[ext_resource type="Script" path="res://Bodies/Fly.gd" id="2_0ra40"]
+[ext_resource type="PackedScene" uid="uid://fw0pny7rgwss" path="res://Legs/BearPaws/BearPawsRight.tscn" id="2_xpn6r"]
 [ext_resource type="PackedScene" uid="uid://bhgsphk3bsxcs" path="res://Mandibles/lobster.tscn" id="3_j2pjs"]
+[ext_resource type="PackedScene" uid="uid://cs5olsf8xcf86" path="res://Carapace/FlyCarapace.tscn" id="4_ab6iq"]
+[ext_resource type="PackedScene" uid="uid://cpj72i5p4ub0k" path="res://Legs/BearPaws/BearPawsLeft.tscn" id="4_y3rv0"]
 
 [node name="Fly" instance=ExtResource("1_0xjm0")]
+script = ExtResource("2_0ra40")
 
 [node name="Lobster" parent="Mandibles" index="0" instance=ExtResource("3_j2pjs")]
 z_index = -1
 collision_layer = 1
 collision_mask = 1
+script = null
 
-[node name="BearPaws" parent="Legs" index="0" instance=ExtResource("2_snmvf")]
-z_index = -1
-collision_layer = 1
-collision_mask = 1
+[node name="FlyCarapace" parent="Carapace" index="0" instance=ExtResource("4_ab6iq")]
+
+[node name="BearPawsRight" parent="RightLeg" index="0" instance=ExtResource("2_xpn6r")]
+script = null
+
+[node name="BearPawsLeft" parent="LeftLeg" index="0" instance=ExtResource("4_y3rv0")]
+script = null

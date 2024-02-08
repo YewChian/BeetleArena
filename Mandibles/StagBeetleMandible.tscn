@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cly0g404spggv"]
+
+[ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_radw3"]
+[ext_resource type="Texture2D" uid="uid://ufpu358dfw2v" path="res://Assets/Mandibles/StagBeetleMandible.png" id="2_j5if8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nu4ug"]
+radius = 131.0
+height = 324.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5sjg"]
+radius = 148.0
+height = 332.0
+
+[node name="StagBeetleMandible" instance=ExtResource("1_radw3")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_j5if8")
+
+[node name="Skeleton" parent="." index="1"]
+position = Vector2(0, -254)
+shape = SubResource("CapsuleShape2D_nu4ug")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -286)
+shape = SubResource("CapsuleShape2D_a5sjg")

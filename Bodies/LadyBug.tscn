@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://teiess873lvn"]
+
+[ext_resource type="PackedScene" uid="uid://cpkc2rctcbg64" path="res://Bodies/Beetle.tscn" id="1_53c16"]
+[ext_resource type="PackedScene" uid="uid://cbah3vkpn4u2u" path="res://Mandibles/LadybugMandibles.tscn" id="2_mc1di"]
+[ext_resource type="PackedScene" uid="uid://dv0umde6eh74m" path="res://Carapace/LadybugCarapace.tscn" id="3_x82nc"]
+[ext_resource type="PackedScene" uid="uid://8ljyepidst4j" path="res://Legs/LadybugLegs/LadybugRightLeg.tscn" id="4_4anrh"]
+[ext_resource type="PackedScene" uid="uid://casu874iwsjf8" path="res://Legs/LadybugLegs/LadybugLeftLeg.tscn" id="5_ggjfv"]
+
+[node name="LadyBug" instance=ExtResource("1_53c16")]
+
+[node name="LadybugMandibles" parent="Mandibles" index="0" instance=ExtResource("2_mc1di")]
+script = null
+
+[node name="LadybugCarapace" parent="Carapace" index="0" instance=ExtResource("3_x82nc")]
+
+[node name="LadybugLegRight" parent="RightLeg" index="0" instance=ExtResource("4_4anrh")]
+script = null
+
+[node name="LadybugLegLeft" parent="LeftLeg" index="0" instance=ExtResource("5_ggjfv")]
+script = null

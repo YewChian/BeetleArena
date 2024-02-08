@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://byvbd0l1bw2eh"]
+
+[ext_resource type="Script" path="res://Carapace/Carapace.gd" id="1_fqfp8"]
+
+[node name="Carapace" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_fqfp8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Skeleton" type="CollisionShape2D" parent="."]
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

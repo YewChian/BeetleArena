@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://fw0pny7rgwss"]
-
-[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/legs.tscn" id="1_7himm"]
-[ext_resource type="Texture2D" uid="uid://88bfo4ycjsbs" path="res://Assets/Legs/BearPaws.png" id="2_5oabl"]
-
-[node name="BearPaws" instance=ExtResource("1_7himm")]
-
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_5oabl")

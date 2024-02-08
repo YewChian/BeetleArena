@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Beetle
 
 enum {
 	Wander,
@@ -12,19 +13,34 @@ var spd = 1
 var state
 var turn_rate
 var direction = Vector2(1,1)
+var is_invulnerable = false
 
 
 func _ready():
+	initialise_stats()
 	enter_state(Wander)
 
 
+func initialise_stats():
+	spd = 1
+	str = 1
+	end = 2
+	
+	#spd = get_node("LeftLeg").get_children()[0].spd
+	#str = get_node("Mandibles").get_children()[0].str
+	#end = get_node("Carapace").get_children()[0].end
+	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	#for debugging
+	$End.text = str(end)
+	if end <= 0:
+		queue_free()
+	#########
 	match state:
 		Wander:
 			move_and_collide(direction * spd)
-			if $WallDetector.is_colliding() and state != Pivot:
-				enter_state(Pivot)
 		
 		Pivot:
 			pass
@@ -68,3 +84,24 @@ func _on_state_timer_timeout():
 	match state:
 		Wander:
 			enter_state(Wander)
+
+
+func _on_wall_detector_body_entered(body):
+	if body.is_in_group("Wall"):
+		enter_state(Pivot)
+
+
+func hurtbox_area_entered(area):
+	var area_owner = area.get_parent().get_parent().get_parent()
+	print("area_owner: ", area_owner)
+	print("self: ", self)
+	if area_owner != self and is_invulnerable == false:
+		is_invulnerable = true
+		print("something entered the hurtbox")
+		end -= 1
+		$InvulnerableTimer.start()
+
+
+func _on_invulnerable_timer_timeout():
+	print("timed out")
+	is_invulnerable = false

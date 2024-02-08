@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs8lva6k3e8jk"
-path="res://.godot/imported/Fly.png-d8696f182d0a9e819a74e4f26f3b5569.ctex"
+uid="uid://6d1n3v5dldhq"
+path="res://.godot/imported/StagBeetleLegs.png-0da9ec5174418cdf03a961610441cfe0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fly.png"
-dest_files=["res://.godot/imported/Fly.png-d8696f182d0a9e819a74e4f26f3b5569.ctex"]
+source_file="res://Assets/Legs/StagBeetleLegs.png"
+dest_files=["res://.godot/imported/StagBeetleLegs.png-0da9ec5174418cdf03a961610441cfe0.ctex"]
 
 [params]
 

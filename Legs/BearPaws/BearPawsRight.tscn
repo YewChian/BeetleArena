@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://fw0pny7rgwss"]
+
+[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_hdxb4"]
+[ext_resource type="Texture2D" uid="uid://88bfo4ycjsbs" path="res://Assets/Legs/BearPaws.png" id="2_oxid5"]
+
+[node name="BearPawsRight" instance=ExtResource("1_hdxb4")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(25, -4)
+texture = ExtResource("2_oxid5")
+hframes = 2
+frame = 1
