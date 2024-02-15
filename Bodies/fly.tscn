@@ -10,11 +10,7 @@
 [node name="Fly" instance=ExtResource("1_0xjm0")]
 script = ExtResource("2_0ra40")
 
-[node name="Lobster" parent="Mandibles" index="0" instance=ExtResource("3_j2pjs")]
-z_index = -1
-collision_layer = 1
-collision_mask = 1
-script = null
+[node name="Lobster" parent="Mandible" index="0" instance=ExtResource("3_j2pjs")]
 
 [node name="FlyCarapace" parent="Carapace" index="0" instance=ExtResource("4_ab6iq")]
 

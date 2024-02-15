@@ -18,7 +18,18 @@ var is_invulnerable = false
 
 func _ready():
 	initialise_stats()
+	initialise_leg_attachment()
+	call_deferred("initialise_WallDetector_attachment")
 	enter_state(Wander)
+	
+	
+func initialise_WallDetector_attachment():
+	$WallDetector.position = $Mandible.get_children()[0].WallDetector_attachment_vector
+
+
+func initialise_leg_attachment():
+	$LeftLeg.position = $Carapace.get_children()[0].left_leg_attachment_vector
+	$RightLeg.position = $Carapace.get_children()[0].left_leg_attachment_vector * Vector2(-1, 1)
 
 
 func initialise_stats():
@@ -27,7 +38,7 @@ func initialise_stats():
 	end = 2
 	
 	#spd = get_node("LeftLeg").get_children()[0].spd
-	#str = get_node("Mandibles").get_children()[0].str
+	#str = get_node("Mandible").get_children()[0].str
 	#end = get_node("Carapace").get_children()[0].end
 	
 
@@ -93,15 +104,11 @@ func _on_wall_detector_body_entered(body):
 
 func hurtbox_area_entered(area):
 	var area_owner = area.get_parent().get_parent().get_parent()
-	print("area_owner: ", area_owner)
-	print("self: ", self)
 	if area_owner != self and is_invulnerable == false:
 		is_invulnerable = true
-		print("something entered the hurtbox")
 		end -= 1
 		$InvulnerableTimer.start()
 
 
 func _on_invulnerable_timer_timeout():
-	print("timed out")
 	is_invulnerable = false

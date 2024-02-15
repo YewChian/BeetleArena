@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv0umde6eh74m"]
+[gd_scene load_steps=6 format=3 uid="uid://dv0umde6eh74m"]
 
 [ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_7n172"]
 [ext_resource type="Texture2D" uid="uid://cu5ugsali8k5m" path="res://Assets/Carapace/LadybugCarapace.png" id="2_1s4wc"]
+[ext_resource type="Script" path="res://Carapace/LadybugCarapace.gd" id="2_cqvt5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as186"]
 radius = 164.0
@@ -12,6 +13,7 @@ radius = 176.0
 height = 352.0
 
 [node name="LadybugCarapace" instance=ExtResource("1_7n172")]
+script = ExtResource("2_cqvt5")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_1s4wc")

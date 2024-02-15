@@ -1,11 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgu3cevlf6dej"]
-
-[ext_resource type="Script" path="res://Mandibles/mandible.gd" id="1_dm2dj"]
+[gd_scene format=3 uid="uid://bgu3cevlf6dej"]
 
 [node name="Mandible" type="Area2D"]
 collision_layer = 16
 collision_mask = 32
-script = ExtResource("1_dm2dj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 

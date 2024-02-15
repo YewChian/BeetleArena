@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl7k5wo62q8t0"]
+[gd_scene load_steps=6 format=3 uid="uid://cl7k5wo62q8t0"]
 
 [ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_rg8br"]
 [ext_resource type="Texture2D" uid="uid://d25ycyml24o0m" path="res://Assets/Carapace/StagBeetleCarapace.png" id="2_kgkel"]
+[ext_resource type="Script" path="res://Carapace/StagBeetleCarapace.gd" id="2_sqmoj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x5lj"]
 radius = 117.0
@@ -12,6 +13,7 @@ radius = 131.0
 height = 486.0
 
 [node name="StagBeetleCarapace" instance=ExtResource("1_rg8br")]
+script = ExtResource("2_sqmoj")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_kgkel")

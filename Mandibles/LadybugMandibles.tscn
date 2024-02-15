@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbah3vkpn4u2u"]
+[gd_scene load_steps=6 format=3 uid="uid://cbah3vkpn4u2u"]
 
 [ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_dlk2q"]
+[ext_resource type="Script" path="res://Mandibles/LadybugMandibles.gd" id="2_5wuoi"]
 [ext_resource type="Texture2D" uid="uid://btsqqnpm0rwfs" path="res://Assets/Mandibles/LadybugMandible.png" id="2_bhawo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yyn6"]
@@ -12,6 +13,7 @@ radius = 65.0
 height = 164.0
 
 [node name="LadybugMandibles" instance=ExtResource("1_dlk2q")]
+script = ExtResource("2_5wuoi")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_bhawo")

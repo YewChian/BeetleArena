@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpughwrnvnx0i"]
+
+[ext_resource type="PackedScene" uid="uid://cpkc2rctcbg64" path="res://Bodies/Beetle.tscn" id="1_sxyit"]
+[ext_resource type="PackedScene" uid="uid://cly0g404spggv" path="res://Mandibles/StagBeetleMandible.tscn" id="2_b33oe"]
+[ext_resource type="PackedScene" uid="uid://cl7k5wo62q8t0" path="res://Carapace/StagBeetleCarapace.tscn" id="3_s1fcq"]
+[ext_resource type="PackedScene" uid="uid://03jx71jb2mtw" path="res://Legs/StagBeetleLegs/StagBeetleRightLeg.tscn" id="5_cyqf8"]
+[ext_resource type="PackedScene" uid="uid://b5akp8ch011e3" path="res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn" id="6_ccqy5"]
+
+[node name="StagBeetle" instance=ExtResource("1_sxyit")]
+
+[node name="StagBeetleMandible" parent="Mandible" index="0" instance=ExtResource("2_b33oe")]
+
+[node name="StagBeetleCarapace" parent="Carapace" index="0" instance=ExtResource("3_s1fcq")]
+
+[node name="StagBeetleRightLeg" parent="RightLeg" index="0" instance=ExtResource("5_cyqf8")]
+
+[node name="StagBeetleLeftLeg" parent="LeftLeg" index="0" instance=ExtResource("6_ccqy5")]

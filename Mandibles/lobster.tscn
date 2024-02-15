@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhgsphk3bsxcs"]
+[gd_scene load_steps=6 format=3 uid="uid://bhgsphk3bsxcs"]
 
 [ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_cb1at"]
 [ext_resource type="Texture2D" uid="uid://7s3qjs2e2uge" path="res://Assets/Mandibles/Lobster.png" id="2_86auq"]
+[ext_resource type="Script" path="res://Mandibles/lobster.gd" id="2_u0wlm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ekuho"]
 radius = 12.0
@@ -13,6 +14,7 @@ height = 34.0
 
 [node name="Lobster" instance=ExtResource("1_cb1at")]
 collision_mask = 7
+script = ExtResource("2_u0wlm")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_86auq")

@@ -8,8 +8,7 @@
 
 [node name="LadyBug" instance=ExtResource("1_53c16")]
 
-[node name="LadybugMandibles" parent="Mandibles" index="0" instance=ExtResource("2_mc1di")]
-script = null
+[node name="LadybugMandibles" parent="Mandible" index="0" instance=ExtResource("2_mc1di")]
 
 [node name="LadybugCarapace" parent="Carapace" index="0" instance=ExtResource("3_x82nc")]
 
