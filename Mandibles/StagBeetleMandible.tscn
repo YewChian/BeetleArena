@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://Mandibles/StagBeetleMandible.gd" id="2_wgcjt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nu4ug"]
-radius = 131.0
-height = 324.0
+radius = 141.0
+height = 282.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5sjg"]
 radius = 148.0

@@ -8,7 +8,8 @@ enum {
 
 var end
 var str
-var spd = 1
+var base_spd
+var aggro_spd
 
 var state
 var turn_rate
@@ -24,7 +25,8 @@ func _ready():
 	
 	
 func initialise_WallDetector_attachment():
-	$WallDetector.position = $Mandible.get_children()[0].WallDetector_attachment_vector
+	print($Carapace.get_children()[0].WallDetector_carapace_attachment_vector)
+	$WallDetector.position = $Mandible.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
 
 
 func initialise_leg_attachment():
@@ -33,13 +35,13 @@ func initialise_leg_attachment():
 
 
 func initialise_stats():
-	spd = 1
+	#spd = 1
 	str = 1
-	end = 2
-	
-	#spd = get_node("LeftLeg").get_children()[0].spd
+	#end = 2
+	base_spd = get_node("LeftLeg").get_children()[0].base_spd
+	aggro_spd = get_node("LeftLeg").get_children()[0].aggro_spd
 	#str = get_node("Mandible").get_children()[0].str
-	#end = get_node("Carapace").get_children()[0].end
+	end = get_node("Carapace").get_children()[0].end
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,7 +53,7 @@ func _physics_process(delta):
 	#########
 	match state:
 		Wander:
-			move_and_collide(direction * spd)
+			move_and_collide(direction * base_spd)
 		
 		Pivot:
 			pass

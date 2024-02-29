@@ -9,11 +9,11 @@
 [node name="LadyBug" instance=ExtResource("1_53c16")]
 
 [node name="LadybugMandibles" parent="Mandible" index="0" instance=ExtResource("2_mc1di")]
+collision_layer = 16
+collision_mask = 32
 
 [node name="LadybugCarapace" parent="Carapace" index="0" instance=ExtResource("3_x82nc")]
 
 [node name="LadybugLegRight" parent="RightLeg" index="0" instance=ExtResource("4_4anrh")]
-script = null
 
-[node name="LadybugLegLeft" parent="LeftLeg" index="0" instance=ExtResource("5_ggjfv")]
-script = null
+[node name="LadybugLeftLeg" parent="LeftLeg" index="0" instance=ExtResource("5_ggjfv")]

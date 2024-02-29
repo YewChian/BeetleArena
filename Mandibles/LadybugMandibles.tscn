@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://btsqqnpm0rwfs" path="res://Assets/Mandibles/LadybugMandible.png" id="2_bhawo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0yyn6"]
-radius = 61.0
-height = 122.0
+radius = 66.0
+height = 132.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_863ln"]
 radius = 65.0
