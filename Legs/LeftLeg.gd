@@ -1,3 +1,12 @@
 extends Area2D
+class_name LeftLeg
 
-var spd = 1
+var base_spd
+var aggro_spd
+
+func _ready():
+	initialise_stats()
+
+
+func initialise_stats():
+	pass

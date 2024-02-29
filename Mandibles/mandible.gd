@@ -1,7 +1,7 @@
 extends Area2D
 class_name Mandible
 
-var WallDetector_attachment_vector
+var WallDetector_mandible_attachment_vector
 var str
 
 func _ready():

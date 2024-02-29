@@ -9,6 +9,8 @@
 [node name="StagBeetle" instance=ExtResource("1_sxyit")]
 
 [node name="StagBeetleMandible" parent="Mandible" index="0" instance=ExtResource("2_b33oe")]
+collision_layer = 16
+collision_mask = 32
 
 [node name="StagBeetleCarapace" parent="Carapace" index="0" instance=ExtResource("3_s1fcq")]
 
