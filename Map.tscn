@@ -1,0 +1,138 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqvosvx7lk3eo"]
+
+[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_3omgl"]
+[ext_resource type="PackedScene" uid="uid://dny0nfowdbk2d" path="res://Buttons/free_beetle.tscn" id="1_vt1dm"]
+[ext_resource type="PackedScene" uid="uid://cktx3mkohi3vp" path="res://Buttons/random.tscn" id="2_tf8qu"]
+[ext_resource type="PackedScene" uid="uid://b502pbqkyjbgq" path="res://Buttons/combat.tscn" id="3_ls0ie"]
+[ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Buttons/free_item.tscn" id="5_1y7q1"]
+[ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Buttons/forge.tscn" id="6_60e8i"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="7_0roct"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -125.0
+offset_right = 722.0
+offset_bottom = 835.0
+texture = ExtResource("1_3omgl")
+
+[node name="FreeBeetle" parent="." instance=ExtResource("1_vt1dm")]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 694.0
+offset_right = 409.0
+offset_bottom = 758.0
+
+[node name="Random" parent="." instance=ExtResource("2_tf8qu")]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 726.0
+offset_right = 609.0
+offset_bottom = 790.0
+
+[node name="Combat" parent="." instance=ExtResource("3_ls0ie")]
+layout_mode = 1
+offset_left = 218.0
+offset_top = 765.0
+offset_right = 282.0
+offset_bottom = 829.0
+
+[node name="Combat2" parent="." instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 336.0
+offset_top = 612.0
+offset_right = 400.0
+offset_bottom = 676.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat3" parent="." instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 479.0
+offset_top = 652.0
+offset_right = 543.0
+offset_bottom = 716.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat4" parent="." instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 527.0
+offset_top = 578.0
+offset_right = 591.0
+offset_bottom = 642.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat5" parent="." instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 230.0
+offset_top = 600.0
+offset_right = 294.0
+offset_bottom = 664.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="free_item" parent="." instance=ExtResource("5_1y7q1")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 462.0
+offset_top = 528.0
+offset_right = 526.0
+offset_bottom = 592.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Random2" parent="." instance=ExtResource("2_tf8qu")]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 529.0
+offset_right = 364.0
+offset_bottom = 593.0
+
+[node name="Forge" parent="." instance=ExtResource("6_60e8i")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 262.0
+offset_top = 402.0
+offset_right = 326.0
+offset_bottom = 466.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Forge2" parent="." instance=ExtResource("6_60e8i")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 492.0
+offset_top = 440.0
+offset_right = 556.0
+offset_bottom = 504.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(392, 670)
+zoom = Vector2(2, 2)
+script = ExtResource("7_0roct")

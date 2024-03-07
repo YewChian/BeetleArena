@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dny0nfowdbk2d"]
+
+[ext_resource type="Texture2D" uid="uid://dkg17v3ojjhe2" path="res://Assets/UI/ForestButton.png" id="1_mbflj"]
+[ext_resource type="Script" path="res://Buttons/free_beetle.gd" id="2_ro5fc"]
+
+[node name="FreeBeetle" type="TextureButton"]
+texture_normal = ExtResource("1_mbflj")
+script = ExtResource("2_ro5fc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
