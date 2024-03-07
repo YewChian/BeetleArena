@@ -4,6 +4,7 @@ class_name Beetle
 enum {
 	Wander,
 	Pivot,
+	Death,
 }
 
 var end
@@ -45,17 +46,22 @@ func initialise_stats():
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	#for debugging
 	$End.text = str(end)
-	if end <= 0:
-		queue_free()
 	#########
 	match state:
 		Wander:
+			if end <= 0:
+				enter_state(Death)
+				
 			move_and_collide(direction * base_spd)
 		
 		Pivot:
+			if end <= 0:
+				enter_state(Death)
+				
+		Death:
 			pass
 
 
@@ -92,6 +98,13 @@ func enter_state(new_state):
 			enter_state(Wander)
 			
 			
+		Death:
+			state = Death
+			$StateTimer.stop()
+			$Mandible.get_children()[0].disable_hitbox()
+			$Carapace.get_children()[0].disable_hurtbox()
+			await $Carapace.get_children()[0].fade_out()
+			queue_free()
 		
 func _on_state_timer_timeout():
 	match state:
@@ -114,3 +127,7 @@ func hurtbox_area_entered(area):
 
 func _on_invulnerable_timer_timeout():
 	is_invulnerable = false
+
+
+
+
