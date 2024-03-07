@@ -10,3 +10,7 @@ func _ready():
 
 func initialise_stats():
 	pass
+	
+	
+func disable_hitbox():
+	$Hitbox.queue_free()
