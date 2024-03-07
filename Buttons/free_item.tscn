@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://do0ujgr4psaji"]
+
+[ext_resource type="Texture2D" uid="uid://62o5k41nh25l" path="res://Assets/UI/FreeItemButton.png" id="1_1b6wd"]
+[ext_resource type="Script" path="res://Buttons/free_item.gd" id="1_2qxr5"]
+
+[node name="free_item" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_1b6wd")
+script = ExtResource("1_2qxr5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b502pbqkyjbgq"]
+
+[ext_resource type="Texture2D" uid="uid://bhrser0ebpbv8" path="res://Assets/UI/ArenaButton.png" id="1_8drfe"]
+[ext_resource type="Script" path="res://Buttons/combat.gd" id="1_lslju"]
+
+[node name="Combat" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_8drfe")
+script = ExtResource("1_lslju")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
