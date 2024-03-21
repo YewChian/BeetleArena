@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://uwqkecbni6pc"]
+
+[ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="1_fk0yx"]
+[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_ll4cd"]
+
+[node name="RandomEvent" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ll4cd")
+
+[node name="Returntomain" parent="." instance=ExtResource("1_fk0yx")]
+position = Vector2(-187, 183)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(568, 381)

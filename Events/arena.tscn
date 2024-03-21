@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cfnftv27jsqvd"]
 
-[ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_x7iif"]
+[ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_4w7x4"]
 
 [node name="Arena" type="Node2D"]
 
@@ -11,7 +11,7 @@ collision_mask = 10
 polygon = PackedVector2Array(-2535, -2284, -1552, -2890, -91, -3025, 1392, -2854, 2439, -2206, 2753, -1315, 2454, 1408, 1534, 2627, -176, 2905, -1901, 2734, -2678, 2413, -2899, 1130, -2977, -666, -2578, -2213, -2193, -1899, -2664, -445, -2507, 538, -2372, 617, -2400, 1529, -1908, 2270, -732, 2555, 394, 2448, 1484, 2028, 1933, 1550, 2176, 823, 2062, -502, 2297, -1044, 2133, -1635, 1498, -2391, -141, -2633, -1474, -2505, -2151, -1928)
 
 [node name="Sprite2D" type="Sprite2D" parent="Arena1Sprite"]
-texture = ExtResource("1_x7iif")
+texture = ExtResource("1_4w7x4")
 
 [node name="Terrain" type="Node2D" parent="."]
 

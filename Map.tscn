@@ -136,3 +136,10 @@ grow_vertical = 1
 position = Vector2(392, 670)
 zoom = Vector2(2, 2)
 script = ExtResource("7_0roct")
+
+[node name="FreeBeetle2" parent="." instance=ExtResource("1_vt1dm")]
+layout_mode = 0
+offset_left = 429.905
+offset_top = 743.477
+offset_right = 493.905
+offset_bottom = 807.477
