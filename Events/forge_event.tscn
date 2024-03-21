@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://vlpllpiftwd6"]
+
+[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_l8p05"]
+[ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_tu8uh"]
+
+[node name="ForgeEvent" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 155.0
+offset_top = -323.0
+offset_right = 795.0
+offset_bottom = 637.0
+texture = ExtResource("1_l8p05")
+
+[node name="Returntomain" parent="." instance=ExtResource("2_tu8uh")]
+position = Vector2(-37, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 248)

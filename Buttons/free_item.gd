@@ -12,5 +12,6 @@ func _process(delta):
 
 
 func _on_pressed():
+	get_tree().change_scene_to_file("res://Events/free_item_event.tscn")
 	print("You Get A Free Item!")
 	

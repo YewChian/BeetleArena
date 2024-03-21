@@ -10,4 +10,5 @@ func _ready():
 
 
 func _on_pressed():
+	get_tree().change_scene_to_file("res://Events/arena.tscn")
 	print("You Go To Combat!")
