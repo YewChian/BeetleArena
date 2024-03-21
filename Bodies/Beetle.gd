@@ -11,6 +11,7 @@ var end
 var str
 var base_spd
 var aggro_spd
+var team
 
 var state
 var turn_rate
@@ -119,7 +120,7 @@ func _on_wall_detector_body_entered(body):
 
 func hurtbox_area_entered(area):
 	var area_owner = area.get_parent().get_parent().get_parent()
-	if area_owner != self and is_invulnerable == false:
+	if area_owner.team != team and is_invulnerable == false:
 		is_invulnerable = true
 		end -= 1
 		$InvulnerableTimer.start()

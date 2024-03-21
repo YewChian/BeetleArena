@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfnftv27jsqvd"]
+[gd_scene load_steps=2 format=3 uid="uid://cfnftv27jsqvd"]
 
 [ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_4w7x4"]
-[ext_resource type="PackedScene" path="res://Bodies/LadyBug.tscn" id="2_prb6x"]
-[ext_resource type="PackedScene" path="res://Bodies/StagBeetle.tscn" id="3_fniho"]
 
 [node name="Arena" type="Node2D"]
 
@@ -14,24 +12,6 @@ polygon = PackedVector2Array(-2535, -2284, -1552, -2890, -91, -3025, 1392, -2854
 
 [node name="Sprite2D" type="Sprite2D" parent="Arena1Sprite"]
 texture = ExtResource("1_4w7x4")
-
-[node name="LadyBug" parent="." instance=ExtResource("2_prb6x")]
-position = Vector2(-1591, 1335)
-
-[node name="StagBeetle" parent="." instance=ExtResource("3_fniho")]
-position = Vector2(-246, 1602)
-
-[node name="LadyBug2" parent="." instance=ExtResource("2_prb6x")]
-position = Vector2(449, 1474)
-
-[node name="StagBeetle2" parent="." instance=ExtResource("3_fniho")]
-position = Vector2(1057, 897)
-
-[node name="LadyBug3" parent="." instance=ExtResource("2_prb6x")]
-position = Vector2(-1133, 791)
-
-[node name="StagBeetle3" parent="." instance=ExtResource("3_fniho")]
-position = Vector2(-780, 1645)
 
 [node name="Terrain" type="Node2D" parent="."]
 
