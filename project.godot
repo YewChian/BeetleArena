@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 disabledbuttons="*res://Singletons/disabledbuttons.gd"
+Inventory="*res://Singletons/Inventory.gd"
 
 [input]
 

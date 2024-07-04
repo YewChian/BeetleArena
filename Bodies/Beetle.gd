@@ -120,6 +120,8 @@ func _on_wall_detector_body_entered(body):
 
 func hurtbox_area_entered(area):
 	var area_owner = area.get_parent().get_parent().get_parent()
+	print("area: ", area)
+	print(area_owner)
 	if area_owner.team != team and is_invulnerable == false:
 		is_invulnerable = true
 		end -= 1

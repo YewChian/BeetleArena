@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://kk2asmgd6tvj"]
+
+[ext_resource type="Script" path="res://Buttons/SelectBeetleButton.gd" id="2_wtvvh"]
+[ext_resource type="PackedScene" uid="uid://teiess873lvn" path="res://Bodies/LadyBug.tscn" id="3_q77lh"]
+[ext_resource type="PackedScene" uid="uid://bpughwrnvnx0i" path="res://Bodies/StagBeetle.tscn" id="4_dpsvf"]
+[ext_resource type="Texture2D" uid="uid://bmw2181g4mk24" path="res://Assets/Buttons/LadybugButton.png" id="4_ljsyf"]
+[ext_resource type="Texture2D" uid="uid://c3u4fuixl8dpr" path="res://Assets/PeckishPeteBackground.png" id="5_3kl2f"]
+[ext_resource type="Texture2D" uid="uid://cncyg3nu0vn4g" path="res://Assets/Buttons/StagBeetleButton.png" id="5_5wyo5"]
+[ext_resource type="Script" path="res://Buttons/start_run_button.gd" id="6_k3mop"]
+
+[node name="StartRunScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SelectBeetle1Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_wtvvh")
+beetle = ExtResource("3_q77lh")
+beetle_button_texture = ExtResource("4_ljsyf")
+
+[node name="SelectBeetle2Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_wtvvh")
+beetle = ExtResource("4_dpsvf")
+beetle_button_texture = ExtResource("5_5wyo5")
+
+[node name="StartRunButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 6.0
+offset_right = 887.0
+offset_bottom = 646.0
+texture_normal = ExtResource("5_3kl2f")
+script = ExtResource("6_k3mop")
+
+[connection signal="pressed" from="VBoxContainer/SelectBeetle1Button" to="VBoxContainer/SelectBeetle1Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/SelectBeetle2Button" to="VBoxContainer/SelectBeetle2Button" method="_on_pressed"]
+[connection signal="pressed" from="StartRunButton" to="StartRunButton" method="_on_pressed"]

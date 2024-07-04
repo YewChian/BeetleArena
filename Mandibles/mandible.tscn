@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://bgu3cevlf6dej"]
 
-[node name="Mandible" type="Area2D"]
-collision_layer = 4
-collision_mask = 4
+[node name="Mandible" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="Skeleton" type="CollisionShape2D" parent="."]
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 16

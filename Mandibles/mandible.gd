@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 class_name Mandible
 
 var WallDetector_mandible_attachment_vector
