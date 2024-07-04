@@ -11,6 +11,6 @@ func _ready():
 	
 func _on_pressed():
 	if disabledbuttons.disabled_dictionary[button_name]== 1 :
-		get_tree().change_scene_to_file("res://Events/combat_event.tscn")
+		get_tree().change_scene_to_file("res://Events/arena.tscn")
 		disabledbuttons.disabled_dictionary[button_name] = 0
 		
