@@ -1,10 +1,16 @@
 extends TextureButton
 
+@onready var button_name = name
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	
+	if disabledbuttons.disabled_dictionary[button_name]== 0 :
+		texture_normal= load("res://Assets/UI/ForestButtonCompleted.png")
+	
 	
 func _on_pressed():
-	get_tree().change_scene_to_file("res://Events/free_beetle_event.tscn")
-	disabled = true
+	if disabledbuttons.disabled_dictionary[button_name]== 1 :
+		get_tree().change_scene_to_file("res://Events/free_beetle_event.tscn")
+		disabledbuttons.disabled_dictionary[button_name] = 0
+		
