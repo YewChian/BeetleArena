@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://iqvmh1opgbwg"]
+[gd_scene load_steps=7 format=3 uid="uid://iqvmh1opgbwg"]
 
 [ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_4w7x4"]
 [ext_resource type="Script" path="res://Events/Arena.gd" id="1_oq4ge"]
+[ext_resource type="Script" path="res://UI/HealthbarContainer.gd" id="3_t60ll"]
+[ext_resource type="Texture2D" uid="uid://dwfgoq6665frc" path="res://Assets/UI/HealthbarUnder.png" id="4_d6jd5"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="4_ngfcw"]
+[ext_resource type="Texture2D" uid="uid://cs1keje7vduiu" path="res://Assets/UI/HealthbarProgress.png" id="5_akmot"]
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_oq4ge")
@@ -21,3 +25,72 @@ texture = ExtResource("1_4w7x4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.15, 0.15)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HealthbarVBox" type="VBoxContainer" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthbarContainer0" type="HBoxContainer" parent="UI/HealthbarVBox"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_t60ll")
+
+[node name="NameContainer" type="PanelContainer" parent="UI/HealthbarVBox/HealthbarContainer0"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_ngfcw")
+
+[node name="NameLabel" type="Label" parent="UI/HealthbarVBox/HealthbarContainer0/NameContainer"]
+layout_mode = 2
+theme = ExtResource("4_ngfcw")
+
+[node name="Healthbar" type="TextureProgressBar" parent="UI/HealthbarVBox/HealthbarContainer0"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_under = ExtResource("4_d6jd5")
+texture_progress = ExtResource("5_akmot")
+
+[node name="HealthbarContainer1" type="HBoxContainer" parent="UI/HealthbarVBox"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_t60ll")
+
+[node name="NameContainer" type="PanelContainer" parent="UI/HealthbarVBox/HealthbarContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_ngfcw")
+
+[node name="NameLabel" type="Label" parent="UI/HealthbarVBox/HealthbarContainer1/NameContainer"]
+layout_mode = 2
+theme = ExtResource("4_ngfcw")
+
+[node name="Healthbar" type="TextureProgressBar" parent="UI/HealthbarVBox/HealthbarContainer1"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_under = ExtResource("4_d6jd5")
+texture_progress = ExtResource("5_akmot")
+
+[node name="HealthbarContainer2" type="HBoxContainer" parent="UI/HealthbarVBox"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_t60ll")
+
+[node name="NameContainer" type="PanelContainer" parent="UI/HealthbarVBox/HealthbarContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_ngfcw")
+
+[node name="NameLabel" type="Label" parent="UI/HealthbarVBox/HealthbarContainer2/NameContainer"]
+layout_mode = 2
+theme = ExtResource("4_ngfcw")
+
+[node name="Healthbar" type="TextureProgressBar" parent="UI/HealthbarVBox/HealthbarContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_under = ExtResource("4_d6jd5")
+texture_progress = ExtResource("5_akmot")

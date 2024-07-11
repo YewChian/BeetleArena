@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b66cxik023bhq"]
+
+[ext_resource type="FontFile" uid="uid://b0yju06jjgqbl" path="res://Fonts/NeoVictorian.ttf" id="1_kgfn1"]
+[ext_resource type="Texture2D" uid="uid://dwfgoq6665frc" path="res://Assets/UI/HealthbarUnder.png" id="1_semd2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffu5d"]
+texture = ExtResource("1_semd2")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[resource]
+default_font = ExtResource("1_kgfn1")
+default_font_size = 32
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_ffu5d")
