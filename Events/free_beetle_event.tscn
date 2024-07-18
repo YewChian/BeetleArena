@@ -1,21 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://ggjrx03m4jtf"]
+[gd_scene load_steps=5 format=3 uid="uid://ggjrx03m4jtf"]
 
-[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_ajdbh"]
+[ext_resource type="Texture2D" uid="uid://dufhehk10vlwk" path="res://Assets/Backgrounds/TREE.png" id="1_xiqcd"]
+[ext_resource type="Texture2D" uid="uid://dw5d3kc7dwowe" path="res://Assets/Backgrounds/TREELEAVES.png" id="2_3j4ua"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_5qi2h"]
+[ext_resource type="PackedScene" uid="uid://teiess873lvn" path="res://Bodies/LadyBug.tscn" id="4_sutbv"]
 
-[node name="FreeBeetleEvent" type="Node2D"]
-position = Vector2(39, 18)
+[node name="FreeBeetleEvent" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 18.0
+offset_right = 39.0
+offset_bottom = 18.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 323.0
-offset_top = -402.0
-offset_right = 963.0
-offset_bottom = 558.0
-texture = ExtResource("1_ajdbh")
+[node name="Tree" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xiqcd")
+
+[node name="Leaves" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3j4ua")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(678, 304)
-zoom = Vector2(2, 2)
 
 [node name="Returntomain" parent="." instance=ExtResource("2_5qi2h")]
-position = Vector2(115, 56)
+position = Vector2(-109, -127)
+
+[node name="LadyBug" parent="." instance=ExtResource("4_sutbv")]
+position = Vector2(613, -499)

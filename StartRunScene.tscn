@@ -120,7 +120,7 @@ theme_override_constants/margin_bottom = 80
 
 [node name="StartRunButton" type="Button" parent="MarginContainer2"]
 layout_mode = 2
-text = "Beetle Time"
+text = "BUG OUT!!!"
 script = ExtResource("6_k3mop")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle1Button" to="MarginContainer/HBoxContainer/SelectBeetle1Button" method="_on_pressed"]
