@@ -20,6 +20,8 @@ script = ExtResource("1_yt4jj")
 
 [node name="LeftLeg" type="Node2D" parent="."]
 
+[node name="Soul" type="Node2D" parent="."]
+
 [node name="StateTimer" type="Timer" parent="."]
 
 [node name="WallDetector" type="Area2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cncyg3nu0vn4g"
-path="res://.godot/imported/StagBeetleButton.png-ee66062192445d90e3672ca464adfc6c.ctex"
+uid="uid://codwkwu710hsx"
+path="res://.godot/imported/WeevilButtonHover.png-69e15a1e2bccfbca6e39f13ae7fb915f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/StagBeetleButton.png"
-dest_files=["res://.godot/imported/StagBeetleButton.png-ee66062192445d90e3672ca464adfc6c.ctex"]
+source_file="res://Assets/Buttons/WeevilButtonHover.png"
+dest_files=["res://.godot/imported/WeevilButtonHover.png-69e15a1e2bccfbca6e39f13ae7fb915f.ctex"]
 
 [params]
 

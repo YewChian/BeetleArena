@@ -1,47 +1,128 @@
-[gd_scene load_steps=8 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=14 format=3 uid="uid://kk2asmgd6tvj"]
 
+[ext_resource type="Script" path="res://UI/StartRunScene.gd" id="1_jv30d"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
 [ext_resource type="Script" path="res://Buttons/SelectBeetleButton.gd" id="2_wtvvh"]
+[ext_resource type="Texture2D" uid="uid://det6ixr7btlfe" path="res://Assets/Buttons/LadybugButtonNormal.png" id="3_aflcc"]
 [ext_resource type="PackedScene" uid="uid://teiess873lvn" path="res://Bodies/LadyBug.tscn" id="3_q77lh"]
 [ext_resource type="PackedScene" uid="uid://bpughwrnvnx0i" path="res://Bodies/StagBeetle.tscn" id="4_dpsvf"]
-[ext_resource type="Texture2D" uid="uid://bmw2181g4mk24" path="res://Assets/Buttons/LadybugButton.png" id="4_ljsyf"]
-[ext_resource type="Texture2D" uid="uid://c3u4fuixl8dpr" path="res://Assets/PeckishPeteBackground.png" id="5_3kl2f"]
-[ext_resource type="Texture2D" uid="uid://cncyg3nu0vn4g" path="res://Assets/Buttons/StagBeetleButton.png" id="5_5wyo5"]
+[ext_resource type="Texture2D" uid="uid://jhnhir2w2bck" path="res://Assets/Buttons/LadybugButtonHover.png" id="4_tpym5"]
+[ext_resource type="Texture2D" uid="uid://cwxdtw3rk7j5a" path="res://Assets/Buttons/StagButtonNormal.png" id="5_1lit5"]
+[ext_resource type="Texture2D" uid="uid://x8rdsnsfbeqa" path="res://Assets/SplashArt/Ladybug.png" id="6_3axts"]
+[ext_resource type="Texture2D" uid="uid://cw3nicbu74lok" path="res://Assets/Buttons/StagButtonHover.png" id="6_65lmm"]
 [ext_resource type="Script" path="res://Buttons/start_run_button.gd" id="6_k3mop"]
+[ext_resource type="Script" path="res://UI/StartRunInfo.gd" id="10_s8kac"]
+[ext_resource type="Texture2D" uid="uid://ck4r0y76vh4mu" path="res://Assets/SplashArt/StagBeetle.png" id="12_m7dyg"]
 
-[node name="StartRunScene" type="Control"]
+[node name="StartRunScene" type="CanvasLayer"]
+script = ExtResource("1_jv30d")
+
+[node name="Info" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("1_rwjul")
+script = ExtResource("10_s8kac")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="SplashArt" type="TextureRect" parent="Info"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Info"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_top = 256
 
-[node name="SelectBeetle1Button" type="TextureButton" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Info/MarginContainer"]
 layout_mode = 2
+
+[node name="BeetleType" type="Label" parent="Info/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+
+[node name="Container" type="Container" parent="Info/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="BeetleDescription" type="Label" parent="Info/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="SelectBeetle1Button" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_aflcc")
+texture_hover = ExtResource("4_tpym5")
 script = ExtResource("2_wtvvh")
 beetle = ExtResource("3_q77lh")
-beetle_button_texture = ExtResource("4_ljsyf")
+splash_art = ExtResource("6_3axts")
+beetle_type = "LadyBug"
+beetle_description = "Tiny red dude that excels at being weak."
 
-[node name="SelectBeetle2Button" type="TextureButton" parent="VBoxContainer"]
+[node name="Container" type="Container" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
+
+[node name="SelectBeetle2Button" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_1lit5")
+texture_hover = ExtResource("6_65lmm")
 script = ExtResource("2_wtvvh")
 beetle = ExtResource("4_dpsvf")
-beetle_button_texture = ExtResource("5_5wyo5")
+splash_art = ExtResource("12_m7dyg")
+beetle_type = "Stag Beetle"
+beetle_description = "The big brother bully beatdown beetle."
 
-[node name="StartRunButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 247.0
-offset_top = 6.0
-offset_right = 887.0
-offset_bottom = 646.0
-texture_normal = ExtResource("5_3kl2f")
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_rwjul")
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="StartRunButton" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+text = "Beetle Time"
 script = ExtResource("6_k3mop")
 
-[connection signal="pressed" from="VBoxContainer/SelectBeetle1Button" to="VBoxContainer/SelectBeetle1Button" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/SelectBeetle2Button" to="VBoxContainer/SelectBeetle2Button" method="_on_pressed"]
-[connection signal="pressed" from="StartRunButton" to="StartRunButton" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle1Button" to="MarginContainer/HBoxContainer/SelectBeetle1Button" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle2Button" to="MarginContainer/HBoxContainer/SelectBeetle2Button" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer2/StartRunButton" to="MarginContainer2/StartRunButton" method="_on_pressed"]

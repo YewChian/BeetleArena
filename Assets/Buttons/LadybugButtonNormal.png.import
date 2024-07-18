@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmw2181g4mk24"
-path="res://.godot/imported/LadybugButton.png-1734d51006378e098480dc9c486de899.ctex"
+uid="uid://det6ixr7btlfe"
+path="res://.godot/imported/LadybugButtonNormal.png-6eddbab6b82d64a74017ef4ea26ebec0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/LadybugButton.png"
-dest_files=["res://.godot/imported/LadybugButton.png-1734d51006378e098480dc9c486de899.ctex"]
+source_file="res://Assets/Buttons/LadybugButtonNormal.png"
+dest_files=["res://.godot/imported/LadybugButtonNormal.png-6eddbab6b82d64a74017ef4ea26ebec0.ctex"]
 
 [params]
 

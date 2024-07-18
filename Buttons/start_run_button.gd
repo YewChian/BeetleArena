@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
 
 var map_scene_path = "res://Map.tscn"
 
