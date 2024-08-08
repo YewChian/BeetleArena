@@ -15,7 +15,7 @@ var team
 
 var state
 var turn_rate
-var direction = Vector2(1,1)
+var direction = Vector2(-1,0.5)
 var is_invulnerable = false
 
 
