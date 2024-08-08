@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BeetleArena"
-run/main_scene="res://Buttons/free_beetle.tscn"
+run/main_scene="res://Map.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 disabledbuttons="*res://Singletons/disabledbuttons.gd"
 Inventory="*res://Singletons/Inventory.gd"
+GroupsNTiers="*res://Singletons/GroupsNTiers.gd"
 
 [input]
 
