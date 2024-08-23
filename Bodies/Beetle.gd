@@ -12,6 +12,8 @@ var str
 var base_spd
 var aggro_spd
 var team
+var nickname: String
+var nature: String
 
 var state
 var turn_rate
@@ -38,11 +40,11 @@ func initialise_leg_attachment():
 
 func initialise_stats():
 	#spd = 1
-	str = 1
+	#str = 1
 	#end = 2
 	base_spd = get_node("LeftLeg").get_children()[0].base_spd
 	aggro_spd = get_node("LeftLeg").get_children()[0].aggro_spd
-	#str = get_node("Mandible").get_children()[0].str
+	str = get_node("Mandible").get_children()[0].str
 	end = get_node("Carapace").get_children()[0].end
 	
 
@@ -130,7 +132,3 @@ func hurtbox_area_entered(area):
 
 func _on_invulnerable_timer_timeout():
 	is_invulnerable = false
-
-
-
-

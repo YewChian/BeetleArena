@@ -1,16 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=16 format=3 uid="uid://kk2asmgd6tvj"]
 
 [ext_resource type="Script" path="res://UI/StartRunScene.gd" id="1_jv30d"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
 [ext_resource type="Script" path="res://Buttons/SelectBeetleButton.gd" id="2_wtvvh"]
 [ext_resource type="Texture2D" uid="uid://det6ixr7btlfe" path="res://Assets/Buttons/LadybugButtonNormal.png" id="3_aflcc"]
-[ext_resource type="PackedScene" uid="uid://teiess873lvn" path="res://Bodies/LadyBug.tscn" id="3_q77lh"]
-[ext_resource type="PackedScene" uid="uid://bpughwrnvnx0i" path="res://Bodies/StagBeetle.tscn" id="4_dpsvf"]
 [ext_resource type="Texture2D" uid="uid://jhnhir2w2bck" path="res://Assets/Buttons/LadybugButtonHover.png" id="4_tpym5"]
 [ext_resource type="Texture2D" uid="uid://cwxdtw3rk7j5a" path="res://Assets/Buttons/StagButtonNormal.png" id="5_1lit5"]
 [ext_resource type="Texture2D" uid="uid://x8rdsnsfbeqa" path="res://Assets/SplashArt/Ladybug.png" id="6_3axts"]
 [ext_resource type="Texture2D" uid="uid://cw3nicbu74lok" path="res://Assets/Buttons/StagButtonHover.png" id="6_65lmm"]
 [ext_resource type="Script" path="res://Buttons/start_run_button.gd" id="6_k3mop"]
+[ext_resource type="PackedScene" uid="uid://cbah3vkpn4u2u" path="res://Mandibles/LadybugMandibles.tscn" id="7_nb4wt"]
+[ext_resource type="PackedScene" uid="uid://dv0umde6eh74m" path="res://Carapace/LadybugCarapace.tscn" id="8_b5wg8"]
+[ext_resource type="PackedScene" uid="uid://casu874iwsjf8" path="res://Legs/LadybugLegs/LadybugLeftLeg.tscn" id="9_2e8gm"]
+[ext_resource type="PackedScene" uid="uid://8ljyepidst4j" path="res://Legs/LadybugLegs/LadybugRightLeg.tscn" id="10_rdyde"]
 [ext_resource type="Script" path="res://UI/StartRunInfo.gd" id="10_s8kac"]
 [ext_resource type="Texture2D" uid="uid://ck4r0y76vh4mu" path="res://Assets/SplashArt/StagBeetle.png" id="12_m7dyg"]
 
@@ -84,7 +86,11 @@ size_flags_horizontal = 3
 texture_normal = ExtResource("3_aflcc")
 texture_hover = ExtResource("4_tpym5")
 script = ExtResource("2_wtvvh")
-beetle = ExtResource("3_q77lh")
+beetle_mandibles = ExtResource("7_nb4wt")
+beetle_carapace = ExtResource("8_b5wg8")
+beetle_left_leg = ExtResource("9_2e8gm")
+beetle_right_leg = ExtResource("10_rdyde")
+beetle_nature = "Brave"
 splash_art = ExtResource("6_3axts")
 beetle_type = "LadyBug"
 beetle_description = "Tiny red dude that excels at being weak."
@@ -99,7 +105,6 @@ size_flags_horizontal = 3
 texture_normal = ExtResource("5_1lit5")
 texture_hover = ExtResource("6_65lmm")
 script = ExtResource("2_wtvvh")
-beetle = ExtResource("4_dpsvf")
 splash_art = ExtResource("12_m7dyg")
 beetle_type = "Stag Beetle"
 beetle_description = "The big brother bully beatdown beetle."
