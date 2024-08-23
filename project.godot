@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 disabledbuttons="*res://Singletons/disabledbuttons.gd"
 Inventory="*res://Singletons/Inventory.gd"
 GroupsNTiers="*res://Singletons/GroupsNTiers.gd"
+ArenaInfo="*res://Singletons/ArenaInfo.gd"
 
 [display]
 

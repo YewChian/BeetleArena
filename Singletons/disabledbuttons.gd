@@ -21,5 +21,3 @@ var disabled_dictionary = {
 "Forge7C" : 1,
 "Combat8" : 1,
 }
-
-
