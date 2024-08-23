@@ -1,6 +1,7 @@
 extends TextureButton
 
 @onready var button_name = name
+@export var difficulty: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +12,7 @@ func _ready():
 	
 func _on_pressed():
 	if disabledbuttons.disabled_dictionary[button_name]== 1 and GroupsNTiers.group_dictionary[button_name]== GroupsNTiers.current_tier + 1:
+		ArenaInfo.current_difficulty = difficulty
 		get_tree().change_scene_to_file("res://Events/arena.tscn")
 		disabledbuttons.disabled_dictionary[button_name] = 0
 		GroupsNTiers.current_tier += 1 
