@@ -12,7 +12,7 @@ config_version=5
 
 config/name="BeetleArena"
 run/main_scene="res://Map.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 disabledbuttons="*res://Singletons/disabledbuttons.gd"
 Inventory="*res://Singletons/Inventory.gd"
 GroupsNTiers="*res://Singletons/GroupsNTiers.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [input]
 
