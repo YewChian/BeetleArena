@@ -1,17 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://uwqkecbni6pc"]
+[gd_scene load_steps=4 format=3 uid="uid://uwqkecbni6pc"]
 
+[ext_resource type="Texture2D" uid="uid://b5liasy5k6ufx" path="res://Assets/Backgrounds/PECKISHPETE.png" id="1_6h3o2"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="1_fk0yx"]
-[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_ll4cd"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="2_mp02v"]
 
 [node name="RandomEvent" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Returntomain" parent="CanvasLayer" instance=ExtResource("1_fk0yx")]
+offset_left = 377.0
+offset_top = 531.0
+offset_right = 377.0
+offset_bottom = 531.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_ll4cd")
+theme = ExtResource("2_mp02v")
 
-[node name="Returntomain" parent="." instance=ExtResource("1_fk0yx")]
-position = Vector2(-187, 183)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_6h3o2")
+stretch_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(568, 381)
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "peckish pete party proliferation! "

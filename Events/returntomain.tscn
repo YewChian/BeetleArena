@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://62o5k41nh25l" path="res://Assets/UI/FreeItemButton.png" id="1_ve7jc"]
 [ext_resource type="Script" path="res://Events/returntomain.gd" id="2_ux6tx"]
 
-[node name="Returntomain" type="Node2D"]
+[node name="Returntomain" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 505.0

@@ -1,17 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyjkxtlhaxqmf"]
 
+[ext_resource type="Texture2D" uid="uid://byiybaj2tcpg2" path="res://Assets/Backgrounds/FREEITEM.png" id="1_4jt1t"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="1_gichl"]
-[ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_s8dym"]
 
 [node name="FreeItemEvent" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_s8dym")
-
-[node name="Returntomain" parent="." instance=ExtResource("1_gichl")]
-position = Vector2(-104, 64)
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(540, 316)
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 640.0
+offset_bottom = 960.0
+texture = ExtResource("1_4jt1t")
+stretch_mode = 2
+
+[node name="Returntomain" parent="CanvasLayer" instance=ExtResource("1_gichl")]
+offset_left = 337.0
+offset_top = 526.0
+offset_right = 337.0
+offset_bottom = 526.0
