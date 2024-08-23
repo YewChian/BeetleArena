@@ -8,11 +8,12 @@ extends TextureButton
 @export var splash_art : Texture2D
 @export var beetle_type : String
 @export var beetle_description : String
+var beetle_nickname: String
 
 func _on_pressed():
 	Inventory.beetles = {}
 	
-	Inventory.beetles["Ladybug"] = {
+	Inventory.beetles["Generic player beetle name"] = {
 		"mandibles": beetle_mandibles,
 		"carapace": beetle_carapace,
 		"left_leg": beetle_left_leg,

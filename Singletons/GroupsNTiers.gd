@@ -23,4 +23,3 @@ var group_dictionary = {
 }
 
 var current_tier = 0
-
