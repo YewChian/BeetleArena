@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ggjrx03m4jtf"]
+[gd_scene load_steps=8 format=3 uid="uid://ggjrx03m4jtf"]
 
 [ext_resource type="Script" path="res://Events/FreeBeetleEvent.gd" id="1_fgsk1"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_kkdcy"]
 [ext_resource type="Texture2D" uid="uid://dufhehk10vlwk" path="res://Assets/Backgrounds/TREE.png" id="1_xiqcd"]
 [ext_resource type="Texture2D" uid="uid://dw5d3kc7dwowe" path="res://Assets/Backgrounds/TREELEAVES.png" id="2_3j4ua"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_5qi2h"]
-[ext_resource type="PackedScene" uid="uid://teiess873lvn" path="res://Bodies/LadyBug.tscn" id="4_sutbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhd1r"]
 size = Vector2(111, 151)
@@ -60,11 +59,10 @@ text = "Damn... why didn't you click the beetle...."
 scale = Vector2(0.5, 0.5)
 
 [node name="Returntomain" parent="." instance=ExtResource("2_5qi2h")]
-position = Vector2(-109, -127)
-
-[node name="LadyBug" parent="." instance=ExtResource("4_sutbv")]
-position = Vector2(201, 396)
-scale = Vector2(0.2, 0.2)
+offset_left = -109.0
+offset_top = -127.0
+offset_right = -109.0
+offset_bottom = -127.0
 
 [node name="Walls" type="StaticBody2D" parent="." groups=["Wall"]]
 collision_mask = 10

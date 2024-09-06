@@ -42,10 +42,10 @@ func initialise_stats():
 	#spd = 1
 	#str = 1
 	#end = 2
-	base_spd = get_node("LeftLeg").get_children()[0].base_spd
-	aggro_spd = get_node("LeftLeg").get_children()[0].aggro_spd
-	str = get_node("Mandible").get_children()[0].str
-	end = get_node("Carapace").get_children()[0].end
+	base_spd += get_node("LeftLeg").get_children()[0].base_spd
+	aggro_spd += get_node("LeftLeg").get_children()[0].aggro_spd
+	str += get_node("Mandible").get_children()[0].str
+	end += get_node("Carapace").get_children()[0].end
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

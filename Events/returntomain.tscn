@@ -8,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 505.0
 offset_top = 315.0
 offset_right = 545.0
