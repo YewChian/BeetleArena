@@ -47,9 +47,21 @@ func _process(delta):
 
 func minigame_over():
 	%MinigameOverLabel.visible = true
+	%MinigameOverLabel.text = "Damn... why didn't you click the beetle...."
 	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Map.tscn")
 
 
+func get_free_beetle(new_beetle: Object):
+	%MinigameOverUI.visible = true
+	%MinigameOverLabel.text = "YOU GOT A " + str(new_beetle) + "!!! show glowy animation and beetle here!!!"
+
+
 func _on_game_over_yo_area_entered(area):
 	minigame_over()
+
+
+func _on_map_button_pressed() -> void:
+	var beetle_nickname = %NameLineEdit.text
+	printerr("need to add beetle to inventory")
+	get_tree().change_scene_to_file("res://Map.tscn")

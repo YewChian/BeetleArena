@@ -6,6 +6,7 @@ var end
 var left_leg_attachment_vector
 var WallDetector_carapace_attachment_vector
 
+
 func _ready():
 	initialise_stats()
  
@@ -30,3 +31,11 @@ func fade_out():
 func disable_hurtbox():
 	$Hurtbox.queue_free()
 	remove_child($Hurtbox)
+
+
+func _on_hurtbox_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if get_tree().current_scene.name == "FreeBeetleEvent":
+		if event is InputEventMouseButton and event.pressed:
+			var carapace_owner = get_parent().get_parent()
+			print(carapace_owner)
+			await get_tree().current_scene.get_free_beetle(carapace_owner)

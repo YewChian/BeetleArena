@@ -19,6 +19,7 @@ offset_left = 39.0
 offset_top = 18.0
 offset_right = 39.0
 offset_bottom = 18.0
+mouse_filter = 2
 theme = ExtResource("1_kkdcy")
 script = ExtResource("1_fgsk1")
 
@@ -40,20 +41,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_3j4ua")
-
-[node name="MinigameOverLabel" type="Label" parent="."]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 48
-text = "Damn... why didn't you click the beetle...."
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -92,4 +79,40 @@ shape = SubResource("RectangleShape2D_mle3w")
 position = Vector2(53, 771)
 shape = SubResource("RectangleShape2D_mle3w")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MinigameOverUI" type="VBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kkdcy")
+
+[node name="MinigameOverLabel" type="Label" parent="CanvasLayer/MinigameOverUI"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 48
+text = "Damn... why didn't you click the beetle...."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLineEdit" type="LineEdit" parent="CanvasLayer/MinigameOverUI"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Enter name here"
+alignment = 1
+
+[node name="MapButton" type="Button" parent="CanvasLayer/MinigameOverUI"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Confirm and return to map"
+
 [connection signal="area_entered" from="GameOverYo" to="." method="_on_game_over_yo_area_entered"]
+[connection signal="pressed" from="CanvasLayer/MinigameOverUI/MapButton" to="." method="_on_map_button_pressed"]
