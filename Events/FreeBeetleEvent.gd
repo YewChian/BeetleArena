@@ -1,7 +1,9 @@
 extends Control
 
+var obtained_beetle_nickname = null
+
 var beetle_pool: Dictionary = {
-	"Ladybug Tough": {
+	"Toughbug": {
 		"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
 		"carapace": load("res://Carapace/LadybugCarapace.tscn"),
 		"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
@@ -11,7 +13,7 @@ var beetle_pool: Dictionary = {
 		"bonus_str": 0,
 		"bonus_spd": 0,
 	},
-	"Ladybug Fast": {
+	"Ladybugger": {
 		"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
 		"carapace": load("res://Carapace/LadybugCarapace.tscn"),
 		"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
@@ -21,7 +23,7 @@ var beetle_pool: Dictionary = {
 		"bonus_str": 0,
 		"bonus_spd": 1,
 	},
-	"Ladybug Painful": {
+	"Spotted Ladybug": {
 		"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
 		"carapace": load("res://Carapace/LadybugCarapace.tscn"),
 		"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
@@ -36,13 +38,19 @@ var beetle_pool: Dictionary = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var new_beetle: Object = Inventory.assemble_beetle("enter nickname here", beetle_pool[beetle_pool.keys()[randi_range(0,len(beetle_pool.keys())-1)]])
-	add_child(new_beetle)
+	randomize()
+	var random_beetle_name = beetle_pool.keys()[randi_range(0,len(beetle_pool.keys())-1)]
+	var random_beetle: Object = Inventory.assemble_beetle(random_beetle_name, beetle_pool[random_beetle_name])
+	random_beetle.scale = Vector2(0.2, 0.2)
+	add_child(random_beetle)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if %NameLineEdit.text == "":
+		$CanvasLayer/MinigameOverUI/MapButton.disabled = true
+	else:
+		$CanvasLayer/MinigameOverUI/MapButton.disabled = false
 
 
 func minigame_over():
@@ -53,15 +61,18 @@ func minigame_over():
 
 
 func get_free_beetle(new_beetle: Object):
+	obtained_beetle_nickname = new_beetle.nickname
+	new_beetle.process_mode = PROCESS_MODE_DISABLED
 	%MinigameOverUI.visible = true
-	%MinigameOverLabel.text = "YOU GOT A " + str(new_beetle) + "!!! show glowy animation and beetle here!!!"
-
+	%MinigameOverLabel.text = "Caught a " + new_beetle.nature + " " + obtained_beetle_nickname + "!!!\n"
+	
 
 func _on_game_over_yo_area_entered(area):
 	minigame_over()
 
 
 func _on_map_button_pressed() -> void:
-	var beetle_nickname = %NameLineEdit.text
-	printerr("need to add beetle to inventory")
+	var new_nickname = %NameLineEdit.text
+	Inventory.beetles[new_nickname] = beetle_pool[obtained_beetle_nickname]
+
 	get_tree().change_scene_to_file("res://Map.tscn")

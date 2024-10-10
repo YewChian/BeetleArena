@@ -30,7 +30,7 @@ func _ready():
 	
 func initialise_WallDetector_attachment():
 	print($Carapace.get_children()[0].WallDetector_carapace_attachment_vector)
-	$WallDetector.position = $Mandible.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
+	$WallDetector.position = $Mandibles.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
 
 
 func initialise_leg_attachment():
@@ -44,7 +44,7 @@ func initialise_stats():
 	#end = 2
 	base_spd += get_node("LeftLeg").get_children()[0].base_spd
 	aggro_spd += get_node("LeftLeg").get_children()[0].aggro_spd
-	str += get_node("Mandible").get_children()[0].str
+	str += get_node("Mandibles").get_children()[0].str
 	end += get_node("Carapace").get_children()[0].end
 	
 
@@ -104,7 +104,7 @@ func enter_state(new_state):
 		Death:
 			state = Death
 			$StateTimer.stop()
-			$Mandible.get_children()[0].disable_hitbox()
+			$Mandibles.get_children()[0].disable_hitbox()
 			$Carapace.get_children()[0].disable_hurtbox()
 			await $Carapace.get_children()[0].fade_out()
 			queue_free()

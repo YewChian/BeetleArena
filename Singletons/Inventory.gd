@@ -8,7 +8,7 @@ var spare_parts = []
 func assemble_beetle(nickname: String, beetle_data: Dictionary):
 	var new_beetle = load("res://Bodies/Beetle.tscn").instantiate()
 	new_beetle.nickname = nickname
-	new_beetle.get_node("Mandible").add_child(beetle_data["mandibles"].instantiate())
+	new_beetle.get_node("Mandibles").add_child(beetle_data["mandibles"].instantiate())
 	new_beetle.get_node("Carapace").add_child(beetle_data["carapace"].instantiate())
 	new_beetle.get_node("LeftLeg").add_child(beetle_data["left_leg"].instantiate())
 	new_beetle.get_node("RightLeg").add_child(beetle_data["right_leg"].instantiate())
