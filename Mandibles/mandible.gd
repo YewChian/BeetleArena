@@ -1,5 +1,5 @@
 extends Node2D
-class_name Mandible
+class_name Mandibles
 
 var WallDetector_mandible_attachment_vector
 var str
