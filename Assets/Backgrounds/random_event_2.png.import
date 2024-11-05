@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5liasy5k6ufx"
-path="res://.godot/imported/PECKISHPETE.png-a97954d7adb4aa0c0e7fb168e9cf2d68.ctex"
+path="res://.godot/imported/random_event_2.png-6800720fd5191733edd61142ff44ada4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/PECKISHPETE.png"
-dest_files=["res://.godot/imported/PECKISHPETE.png-a97954d7adb4aa0c0e7fb168e9cf2d68.ctex"]
+source_file="res://Assets/Backgrounds/random_event_2.png"
+dest_files=["res://.godot/imported/random_event_2.png-6800720fd5191733edd61142ff44ada4.ctex"]
 
 [params]
 

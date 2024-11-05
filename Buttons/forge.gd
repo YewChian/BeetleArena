@@ -4,7 +4,6 @@ extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(name)
 	if disabledbuttons.disabled_dictionary[button_name]== 0 :
 		texture_normal= load("res://Assets/UI/ForgeButtonCompleted.png")
 		
@@ -15,5 +14,3 @@ func _on_pressed():
 		disabledbuttons.disabled_dictionary[button_name] = 0
 		GroupsNTiers.current_tier += 1 
  	
-	else:
-		print(GroupsNTiers.current_tier)
