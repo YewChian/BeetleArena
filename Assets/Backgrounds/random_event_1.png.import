@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5n7ampfrrxo0"
-path="res://.godot/imported/BEETLESHRINE.png-e823f866de995bec76e9076a2edfd980.ctex"
+path="res://.godot/imported/random_event_1.png-24cbb673a451a4b30bb29539ab18ed9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Backgrounds/BEETLESHRINE.png"
-dest_files=["res://.godot/imported/BEETLESHRINE.png-e823f866de995bec76e9076a2edfd980.ctex"]
+source_file="res://Assets/Backgrounds/random_event_1.png"
+dest_files=["res://.godot/imported/random_event_1.png-24cbb673a451a4b30bb29539ab18ed9e.ctex"]
 
 [params]
 

@@ -3,7 +3,6 @@ extends TextureButton
 @onready var button_name = name
 
 func _ready():
-	print("it's me! ", name)
 	if disabledbuttons.disabled_dictionary[button_name]== 0 :
 		texture_normal= load("res://Assets/UI/ForestButtonCompleted.png")
 	
