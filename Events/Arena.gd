@@ -41,7 +41,6 @@ var enemy_beetles_per_difficulty = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(Inventory.beetles)
 	await initialize_player_beetles()
 
 

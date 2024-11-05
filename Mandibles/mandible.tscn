@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgu3cevlf6dej"]
 
-[node name="Mandible" type="Node2D"]
+[node name="Mandible" type="Node2D" groups=["Mandible"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
