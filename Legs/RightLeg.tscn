@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3apk1w5os81o"]
 
-[node name="RightLeg" type="Area2D"]
+[node name="RightLeg" type="Area2D" groups=["Legs"]]
 collision_layer = 0
 collision_mask = 0
 

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Carapace
 
+var part_name
 var end
 
 var left_leg_attachment_vector

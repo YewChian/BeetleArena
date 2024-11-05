@@ -3,6 +3,7 @@ class_name Mandibles
 
 var WallDetector_mandible_attachment_vector
 var str
+var part_name
 
 func _ready():
 	initialise_stats()

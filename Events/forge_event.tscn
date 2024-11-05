@@ -1,23 +1,87 @@
-[gd_scene load_steps=3 format=3 uid="uid://vlpllpiftwd6"]
+[gd_scene load_steps=5 format=3 uid="uid://vlpllpiftwd6"]
 
+[ext_resource type="Script" path="res://Events/ForgeEvent.gd" id="1_81scc"]
 [ext_resource type="Texture2D" uid="uid://d1nay2emdu4m5" path="res://Assets/Backgrounds/FORGE.png" id="1_dcup2"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_tu8uh"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_lus45"]
 
 [node name="ForgeEvent" type="Node2D"]
+script = ExtResource("1_81scc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 1920.0
-offset_bottom = 720.0
-texture = ExtResource("1_dcup2")
-stretch_mode = 2
 
 [node name="Returntomain" parent="CanvasLayer" instance=ExtResource("2_tu8uh")]
 offset_left = 344.0
 offset_top = 533.0
 offset_right = 344.0
 offset_bottom = 533.0
+
+[node name="BeetleList" type="VBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RightBar" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_lus45")
+
+[node name="MandibleBox" type="VBoxContainer" parent="CanvasLayer/RightBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Header" type="Label" parent="CanvasLayer/RightBar/MandibleBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+text = "Mandibles
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CarapaceBox" type="VBoxContainer" parent="CanvasLayer/RightBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Header" type="Label" parent="CanvasLayer/RightBar/CarapaceBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+text = "Carapace"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LegsBox" type="VBoxContainer" parent="CanvasLayer/RightBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Header" type="Label" parent="CanvasLayer/RightBar/LegsBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+text = "Legs
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Anvil" type="StaticBody2D" parent="." groups=["Wall"]]
+z_index = -1
+z_as_relative = false
+collision_mask = 10
+
+[node name="AnvilCollision" type="CollisionPolygon2D" parent="Anvil"]
+polygon = PackedVector2Array(103, -108, -344, -148, -362, 144, 113, 129, 288, 28, 235, 19, 91, 107, -323, 118, -291, -116, 71, -95, 239, 17, 305, 29)
+
+[node name="Sprite2D" type="Sprite2D" parent="Anvil"]
+texture = ExtResource("1_dcup2")
