@@ -1,4 +1,4 @@
-extends Mandible
+extends Mandibles
 
 func initialise_stats():
 	str = 1
