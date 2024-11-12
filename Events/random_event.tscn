@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://uwqkecbni6pc"]
+[gd_scene load_steps=6 format=3 uid="uid://uwqkecbni6pc"]
 
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="1_fk0yx"]
 [ext_resource type="Script" path="res://Events/random_event.gd" id="1_jtxlu"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="2_mp02v"]
 [ext_resource type="Texture2D" uid="uid://byiybaj2tcpg2" path="res://Assets/Backgrounds/FREEITEM.png" id="4_i328i"]
+[ext_resource type="Script" path="res://Events/option_2.gd" id="5_ahft6"]
 
 [node name="RandomEvent" type="Node2D"]
 script = ExtResource("1_jtxlu")
@@ -20,14 +21,22 @@ offset_right = 377.0
 offset_bottom = 531.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 860.0
 theme = ExtResource("2_mp02v")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_i328i")
 stretch_mode = 4
+
+[node name="Event_Text" type="Label" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 1
+text = "insert text here
+"
+horizontal_alignment = 1
 
 [node name="Option_1" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
@@ -36,4 +45,7 @@ text = "OPTION 1"
 
 [node name="Option_2" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "OPTION 2"
+text = "GO HOME "
+script = ExtResource("5_ahft6")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Option_2" to="CanvasLayer/VBoxContainer/Option_2" method="_on_pressed"]
