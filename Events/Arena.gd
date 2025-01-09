@@ -82,3 +82,55 @@ func initialize_player_beetles():
 		await healthbar_container.initialize_healthbar()
 		i += 1
 			
+func start_arena_defeat_sequence():
+	var tween = get_tree().create_tween()
+	tween.tween_property(%FadeOutCM, "color", Color(0.3, 0.3, 0.3, 1), 1)
+	
+	%DefeatMarginContainer.visible = true
+	%DefeatLabel.text = "Your beetles have been defeated. \n"
+	for beetle_name in Inventory.beetles:
+		%DefeatLabel.text += beetle_name + ", \n"
+	%DefeatLabel.text += "will be remembered in the beetle fighting hall of fame..."
+	
+func start_arena_victory_sequence():
+	var tween = get_tree().create_tween()
+	tween.tween_property(%FadeOutCM, "color", Color(0.3, 0.3, 0.3, 1), 0.5)
+	var new_loot: String = get_random_loot_name()
+	Inventory.spare_parts.append(load(PartsInfo.name_to_path[new_loot]))
+	var new_loot_label = Label.new()
+	new_loot_label.text = "Got a " + new_loot + "!"
+	%RewardList.add_child(new_loot_label)
+	%VictoryMarginContainer.visible = true
+	
+
+func get_random_loot_name():
+	var all_loot = []
+	for part_name in PartsInfo.name_to_path:
+		all_loot.append(part_name)
+	randomize()
+	all_loot.shuffle()
+	return all_loot[0]
+
+func on_beetle_death(beetle: Object):
+	if beetle.team == 0:
+		await start_arena_defeat_sequence()
+		return
+		
+	var beetle_count = 0
+	for node in get_children():
+		if beetle_count > 1:
+			return
+		if node.is_in_group("Beetles"):
+			beetle_count += 1
+			
+	await start_arena_victory_sequence()
+	
+func _on_done_pressed() -> void:
+	get_tree().change_scene_to_file("res://Map.tscn")
+
+
+func _on_back_to_title_pressed() -> void:
+	RunManager.start_new_run()
+	Inventory.beetles = {}
+	Inventory.spare_parts = {}
+	

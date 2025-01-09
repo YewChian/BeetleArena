@@ -1,9 +1,11 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b66cxik023bhq"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://b66cxik023bhq"]
 
 [ext_resource type="FontFile" uid="uid://b0yju06jjgqbl" path="res://Fonts/NeoVictorian.ttf" id="1_kgfn1"]
 [ext_resource type="Texture2D" uid="uid://dwfgoq6665frc" path="res://Assets/UI/HealthbarUnder.png" id="1_semd2"]
 [ext_resource type="Texture2D" uid="uid://f4gx5yf1cwy0" path="res://Assets/Buttons/WoodenButtonHover.png" id="1_xr4sk"]
 [ext_resource type="Texture2D" uid="uid://xplgkgulkfgj" path="res://Assets/Buttons/WoodenButtonNormal.png" id="2_qxegr"]
+[ext_resource type="Texture2D" uid="uid://d1uny7cbq55y" path="res://Assets/UI/WienerStyleBox.png" id="3_4lcc8"]
+[ext_resource type="Texture2D" uid="uid://c7vvnwrrmjmr0" path="res://Assets/UI/WienerAndBugsStyleBox.png" id="3_15ygu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1tc7"]
 texture = ExtResource("1_xr4sk")
@@ -19,6 +21,20 @@ texture_margin_top = 16.0
 texture_margin_right = 16.0
 texture_margin_bottom = 16.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mhbu"]
+texture = ExtResource("3_15ygu")
+texture_margin_left = 24.0
+texture_margin_top = 5.0
+texture_margin_right = 24.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n85wx"]
+texture = ExtResource("3_4lcc8")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffu5d"]
 texture = ExtResource("1_semd2")
 texture_margin_left = 8.0
@@ -31,7 +47,10 @@ default_font = ExtResource("1_kgfn1")
 default_font_size = 32
 Button/styles/hover = SubResource("StyleBoxTexture_l1tc7")
 Button/styles/normal = SubResource("StyleBoxTexture_jl8lf")
+HeaderLarge/font_sizes/font_size = 48
+HeaderLarge/styles/normal = SubResource("StyleBoxTexture_0mhbu")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 8
 Label/font_sizes/font_size = 32
+Label/styles/normal = SubResource("StyleBoxTexture_n85wx")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_ffu5d")

@@ -21,6 +21,8 @@ disabledbuttons="*res://Singletons/disabledbuttons.gd"
 Inventory="*res://Singletons/Inventory.gd"
 GroupsNTiers="*res://Singletons/GroupsNTiers.gd"
 ArenaInfo="*res://Singletons/ArenaInfo.gd"
+RunManager="*res://Singletons/RunManager.gd"
+PartsInfo="*res://Singletons/PartsInfo.gd"
 
 [display]
 
