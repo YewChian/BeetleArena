@@ -107,8 +107,7 @@ func enter_state(new_state):
 			$Mandibles.get_children()[0].disable_hitbox()
 			$Carapace.get_children()[0].disable_hurtbox()
 			await $Carapace.get_children()[0].fade_out()
-			await get_tree().current_scene.on_beetle_death(self)
-
+			get_tree().current_scene.on_beetle_death(self)
 			queue_free()
 		
 func _on_state_timer_timeout():
@@ -125,7 +124,7 @@ func _on_wall_detector_body_entered(body):
 func hurtbox_area_entered(area):
 	var area_owner = area.get_parent().get_parent().get_parent()
 	if area_owner.team != team and is_invulnerable == false:
-		print("got hit")
+		$Carapace.get_child(0).get_node("AnimationPlayer").play("flash_red")
 		is_invulnerable = true
 		end -= 1
 		$InvulnerableTimer.start()

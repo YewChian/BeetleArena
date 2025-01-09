@@ -23,6 +23,7 @@ offset_bottom = 533.0
 unique_name_in_owner = true
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("3_lus45")
 
 [node name="RightBar" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 11
