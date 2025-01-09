@@ -13,13 +13,13 @@ var beetle_nickname: String
 func _on_pressed():
 	Inventory.beetles = {}
 	
-	Inventory.beetles["Generic player beetle name"] = {
+	Inventory.beetles["Hector the Handsome"] = {
 		"mandibles": beetle_mandibles,
 		"carapace": beetle_carapace,
 		"left_leg": beetle_left_leg,
 		"right_leg": beetle_right_leg,
 		"nature": "Brave",
-		"bonus_end": 0,
+		"bonus_end": 1,
 		"bonus_str": 0,
 		"bonus_spd": 0,
 	}
