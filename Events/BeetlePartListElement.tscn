@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfpoy6wo21s6p"]
+
+[ext_resource type="Script" path="res://Events/BeetlePartListElement.gd" id="1_5nxyw"]
+
+[node name="BeetlePartListElement" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_5nxyw")

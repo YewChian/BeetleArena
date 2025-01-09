@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://vlpllpiftwd6"]
+[gd_scene load_steps=6 format=3 uid="uid://vlpllpiftwd6"]
 
 [ext_resource type="Script" path="res://Events/ForgeEvent.gd" id="1_81scc"]
 [ext_resource type="Texture2D" uid="uid://d1nay2emdu4m5" path="res://Assets/Backgrounds/FORGE.png" id="1_dcup2"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_tu8uh"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_lus45"]
+[ext_resource type="Script" path="res://Events/ConfirmForgeButton.gd" id="4_y75av"]
 
 [node name="ForgeEvent" type="Node2D"]
 script = ExtResource("1_81scc")
@@ -75,6 +76,29 @@ text = "Legs
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ForgeOrSkip" type="HBoxContainer" parent="CanvasLayer/RightBar"]
+layout_mode = 2
+
+[node name="Forge" type="Button" parent="CanvasLayer/RightBar/ForgeOrSkip"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "FORGE"
+script = ExtResource("4_y75av")
+
+[node name="Skip" type="Button" parent="CanvasLayer/RightBar/ForgeOrSkip"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKIP"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="CanvasLayer"]
+unique_name_in_owner = true
+initial_position = 1
+size = Vector2i(143, 100)
+dialog_text = "are you sure tho"
+
 [node name="Anvil" type="StaticBody2D" parent="." groups=["Wall"]]
 z_index = -1
 z_as_relative = false
@@ -85,3 +109,6 @@ polygon = PackedVector2Array(103, -108, -344, -148, -362, 144, 113, 129, 288, 28
 
 [node name="Sprite2D" type="Sprite2D" parent="Anvil"]
 texture = ExtResource("1_dcup2")
+
+[connection signal="pressed" from="CanvasLayer/RightBar/ForgeOrSkip/Forge" to="." method="_on_forge_pressed"]
+[connection signal="confirmed" from="CanvasLayer/AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
