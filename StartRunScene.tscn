@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=22 format=3 uid="uid://kk2asmgd6tvj"]
 
 [ext_resource type="Script" path="res://UI/StartRunScene.gd" id="1_jv30d"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://8ljyepidst4j" path="res://Legs/LadybugLegs/LadybugRightLeg.tscn" id="10_rdyde"]
 [ext_resource type="Script" path="res://UI/StartRunInfo.gd" id="10_s8kac"]
 [ext_resource type="Texture2D" uid="uid://ck4r0y76vh4mu" path="res://Assets/SplashArt/StagBeetle.png" id="12_m7dyg"]
+[ext_resource type="PackedScene" uid="uid://cly0g404spggv" path="res://Mandibles/StagBeetleMandible.tscn" id="14_j25xc"]
+[ext_resource type="PackedScene" uid="uid://cl7k5wo62q8t0" path="res://Carapace/StagBeetleCarapace.tscn" id="15_34xk0"]
+[ext_resource type="PackedScene" uid="uid://b5akp8ch011e3" path="res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn" id="16_1peb4"]
+[ext_resource type="PackedScene" uid="uid://03jx71jb2mtw" path="res://Legs/StagBeetleLegs/StagBeetleRightLeg.tscn" id="17_cb01e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mh8s"]
 
@@ -113,6 +117,11 @@ size_flags_horizontal = 3
 texture_normal = ExtResource("5_1lit5")
 texture_hover = ExtResource("6_65lmm")
 script = ExtResource("2_wtvvh")
+beetle_mandibles = ExtResource("14_j25xc")
+beetle_carapace = ExtResource("15_34xk0")
+beetle_left_leg = ExtResource("16_1peb4")
+beetle_right_leg = ExtResource("17_cb01e")
+beetle_nature = "Dumb"
 splash_art = ExtResource("12_m7dyg")
 beetle_type = "Stag Beetle"
 beetle_description = "The big brother bully beatdown beetle."
@@ -131,11 +140,25 @@ theme = ExtResource("1_rwjul")
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 80
 
-[node name="StartRunButton" type="Button" parent="MarginContainer2"]
+[node name="StartRunContainer" type="VBoxContainer" parent="MarginContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme = ExtResource("1_rwjul")
+
+[node name="InputName" type="LineEdit" parent="MarginContainer2/StartRunContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "NAME YOUR BUG"
+alignment = 1
+
+[node name="StartRunButton" type="Button" parent="MarginContainer2/StartRunContainer"]
 layout_mode = 2
 text = "BUG OUT!!!"
 script = ExtResource("6_k3mop")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle1Button" to="MarginContainer/HBoxContainer/SelectBeetle1Button" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle2Button" to="MarginContainer/HBoxContainer/SelectBeetle2Button" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer2/StartRunButton" to="MarginContainer2/StartRunButton" method="_on_pressed"]
+[connection signal="text_changed" from="MarginContainer2/StartRunContainer/InputName" to="." method="_on_input_name_text_changed"]
+[connection signal="pressed" from="MarginContainer2/StartRunContainer/StartRunButton" to="MarginContainer2/StartRunContainer/StartRunButton" method="_on_pressed"]

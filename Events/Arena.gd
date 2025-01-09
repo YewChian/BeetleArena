@@ -9,7 +9,7 @@ var enemy_beetles_per_difficulty = {
 			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
 			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
 			"nature": "Brave",
-			"bonus_end": 0,
+			"bonus_end": 1,
 			"bonus_str": 0,
 			"bonus_spd": 0,
 		},
@@ -83,6 +83,7 @@ func initialize_player_beetles():
 		i += 1
 			
 func start_arena_defeat_sequence():
+	await get_tree().create_timer(1).timeout
 	var tween = get_tree().create_tween()
 	tween.tween_property(%FadeOutCM, "color", Color(0.3, 0.3, 0.3, 1), 1)
 	
@@ -93,11 +94,14 @@ func start_arena_defeat_sequence():
 	%DefeatLabel.text += "will be remembered in the beetle fighting hall of fame..."
 	
 func start_arena_victory_sequence():
+	await get_tree().create_timer(1).timeout
 	var tween = get_tree().create_tween()
 	tween.tween_property(%FadeOutCM, "color", Color(0.3, 0.3, 0.3, 1), 0.5)
 	var new_loot: String = get_random_loot_name()
 	Inventory.spare_parts.append(load(PartsInfo.name_to_path[new_loot]))
 	var new_loot_label = Label.new()
+	new_loot_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	new_loot_label.vertical_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	new_loot_label.text = "Got a " + new_loot + "!"
 	%RewardList.add_child(new_loot_label)
 	%VictoryMarginContainer.visible = true
@@ -112,18 +116,36 @@ func get_random_loot_name():
 	return all_loot[0]
 
 func on_beetle_death(beetle: Object):
+	var team0_count = 0
+	var team1_count = 0
+	
 	if beetle.team == 0:
+		team0_count -= 1
+	if beetle.team == 1:
+		team1_count -= 1
+		
+	for node in get_children():
+		if node.is_in_group("Beetles") == false:
+			continue
+		if node.team == 0:
+			team0_count += 1
+			continue
+		if node.team == 1:
+			team1_count += 1
+			continue
+			
+	if team0_count != 0 and team1_count != 0:
+		return
+	
+	if team0_count == 0:
 		await start_arena_defeat_sequence()
 		return
-		
-	var beetle_count = 0
-	for node in get_children():
-		if beetle_count > 1:
-			return
-		if node.is_in_group("Beetles"):
-			beetle_count += 1
-			
-	await start_arena_victory_sequence()
+	
+	if team1_count == 0:
+		await start_arena_victory_sequence()
+		return
+	
+	print("if code reaches here, the end condition for the arena is not working")
 	
 func _on_done_pressed() -> void:
 	get_tree().change_scene_to_file("res://Map.tscn")
@@ -132,5 +154,5 @@ func _on_done_pressed() -> void:
 func _on_back_to_title_pressed() -> void:
 	RunManager.start_new_run()
 	Inventory.beetles = {}
-	Inventory.spare_parts = {}
+	Inventory.spare_parts = []
 	
