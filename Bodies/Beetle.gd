@@ -104,8 +104,8 @@ func enter_state(new_state):
 		Death:
 			state = Death
 			$StateTimer.stop()
-			$Mandibles.get_children()[0].disable_hitbox()
-			$Carapace.get_children()[0].disable_hurtbox()
+			await $Mandibles.get_children()[0].disable_hitbox()
+			await $Carapace.get_children()[0].disable_hurtbox()
 			await $Carapace.get_children()[0].fade_out()
 			get_tree().current_scene.on_beetle_death(self)
 			queue_free()

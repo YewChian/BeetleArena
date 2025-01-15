@@ -3,13 +3,23 @@ extends Node2D
 #enemy beetles per difficulty from 0 to 3
 var enemy_beetles_per_difficulty = {
 	0: {
-		"Herbert the Hurtful": {
-			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
-			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
-			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
-			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
-			"nature": "Brave",
-			"bonus_end": 1,
+		#"Herbert the Hurtful": {
+			#"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
+			#"carapace": load("res://Carapace/LadybugCarapace.tscn"),
+			#"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
+			#"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
+			#"nature": "Brave",
+			#"bonus_end": 0,
+			#"bonus_str": 0,
+			#"bonus_spd": 0,
+		#},
+		"Grant the Gargantuan": {
+			"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
+			"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
+			"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
+			"right_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn"),
+			"nature": "Evil",
+			"bonus_end": 0,
 			"bonus_str": 0,
 			"bonus_spd": 0,
 		},
