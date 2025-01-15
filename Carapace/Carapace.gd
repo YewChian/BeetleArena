@@ -37,5 +37,4 @@ func _on_hurtbox_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if get_tree().current_scene.name == "FreeBeetleEvent":
 		if event is InputEventMouseButton and event.pressed:
 			var carapace_owner = get_parent().get_parent()
-			print(carapace_owner)
 			await get_tree().current_scene.get_free_beetle(carapace_owner)

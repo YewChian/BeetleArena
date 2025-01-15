@@ -5,5 +5,4 @@ extends Button
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if forge_event_node.selected_part_button != null and disabled == true:
-		print("in the right branch")
 		set_deferred("disabled", false)

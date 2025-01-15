@@ -29,7 +29,6 @@ func _ready():
 	
 	
 func initialise_WallDetector_attachment():
-	print($Carapace.get_children()[0].WallDetector_carapace_attachment_vector)
 	$WallDetector.position = $Mandibles.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
 
 
@@ -55,13 +54,13 @@ func _physics_process(_delta):
 	#########
 	match state:
 		Wander:
-			if end <= 0:
+			if end <= 0 and state != Death:
 				enter_state(Death)
 				
 			move_and_collide(direction * base_spd * 100)
 		
 		Pivot:
-			if end <= 0:
+			if end <= 0 and state != Death:
 				enter_state(Death)
 				
 		Death:

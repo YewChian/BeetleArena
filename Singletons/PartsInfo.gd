@@ -9,5 +9,11 @@ const name_to_path = {
 	"Snick Snackers": "res://Mandibles/StagBeetleMandible.tscn",
 	"Vile Vestibule": "res://Carapace/GiraffeWeevilCarapace.tscn",
 	"Creepy Crawlers": "res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn",
-	"Horrible Head": "res://Mandibles/GiraffeWeevilMandibles.tscn"
+	"Horrible Head": "res://Mandibles/GiraffeWeevilMandibles.tscn",
+	"Poopy Protector": "res://Carapace/CockroachCarapace.tscn",
+	"Grubby Grabbers": "res://Legs/CockroachLegs/CockroachLeftLeg.tscn",
+	"Smelly Skull": "res://Mandibles/CockroachMandibles.tscn",
+	"Gemstone Guard": "res://Carapace/TigerBeetleCarapace.tscn",
+	"Murderous Maw": "res://Mandibles/TigerBeetleMandibles.tscn",
+	"Bicep Triceps": "res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn",
 }

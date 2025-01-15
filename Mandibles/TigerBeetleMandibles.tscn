@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhfosglsg1ab6"]
+
+[ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_3a6vi"]
+[ext_resource type="Script" path="res://Mandibles/TigerBeetleMandibles.gd" id="2_fwisp"]
+[ext_resource type="Texture2D" uid="uid://dr5dbdg27wi3d" path="res://Assets/Mandibles/TigerBeetleMandible.png" id="3_oo1e2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5sjg"]
+radius = 173.0
+height = 346.0
+
+[node name="TigerBeetleMandibles" instance=ExtResource("1_3a6vi")]
+script = ExtResource("2_fwisp")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 203)
+texture = ExtResource("3_oo1e2")
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -129)
+shape = SubResource("CapsuleShape2D_a5sjg")

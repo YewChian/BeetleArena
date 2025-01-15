@@ -13,6 +13,7 @@ var spare_parts = [
 
 
 func assemble_beetle(nickname: String, beetle_data: Dictionary):
+	print("am assembling: ", nickname)
 	var new_beetle = load("res://Bodies/Beetle.tscn").instantiate()
 	new_beetle.nickname = nickname
 	new_beetle.get_node("Mandibles").add_child(beetle_data["mandibles"].instantiate())

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ovf82rex3fm"]
+
+[ext_resource type="Script" path="res://UI/HealthbarContainer.gd" id="1_5jgjv"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="2_tq21q"]
+[ext_resource type="Texture2D" uid="uid://dwfgoq6665frc" path="res://Assets/UI/HealthbarUnder.png" id="3_50dua"]
+[ext_resource type="Texture2D" uid="uid://cs1keje7vduiu" path="res://Assets/UI/HealthbarProgress.png" id="4_hh0m2"]
+
+[node name="HealthbarContainer0" type="HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+size_flags_vertical = 3
+script = ExtResource("1_5jgjv")
+
+[node name="NameContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_tq21q")
+
+[node name="NameLabel" type="Label" parent="NameContainer"]
+layout_mode = 2
+theme = ExtResource("2_tq21q")
+
+[node name="Healthbar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+texture_under = ExtResource("3_50dua")
+texture_progress = ExtResource("4_hh0m2")

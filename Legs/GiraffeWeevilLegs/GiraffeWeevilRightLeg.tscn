@@ -6,7 +6,7 @@
 [node name="GiraffeWeevilRightLeg" instance=ExtResource("1_7q2vl")]
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(169, -71)
+position = Vector2(120, -230)
 texture = ExtResource("2_llpd4")
 hframes = 2
 frame = 1
