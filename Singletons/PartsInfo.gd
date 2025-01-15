@@ -6,5 +6,8 @@ const name_to_path = {
 	"Steady Grippers": "res://Legs/LadybugLegs/LadybugLeftLeg.tscn",
 	"Limber Trunks": "res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn",
 	"Sloppy Gums": "res://Mandibles/LadybugMandibles.tscn",
-	"Snick Snackers": "res://Mandibles/StagBeetleMandible.tscn"
+	"Snick Snackers": "res://Mandibles/StagBeetleMandible.tscn",
+	"Vile Vestibule": "res://Carapace/GiraffeWeevilCarapace.tscn",
+	"Creepy Crawlers": "res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn",
+	"Horrible Head": "res://Mandibles/GiraffeWeevilMandibles.tscn"
 }

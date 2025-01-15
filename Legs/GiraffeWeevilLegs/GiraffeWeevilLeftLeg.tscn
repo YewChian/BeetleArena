@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhynxj4vi7vr8"]
+
+[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_jueor"]
+[ext_resource type="Script" path="res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.gd" id="2_f6d35"]
+[ext_resource type="Texture2D" uid="uid://c0wxmbedi0otv" path="res://Assets/Legs/GiraffeWeevilLegs.png" id="3_xk1r6"]
+
+[node name="GiraffeWeevilLeftLeg" instance=ExtResource("1_jueor")]
+script = ExtResource("2_f6d35")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-149, -67)
+texture = ExtResource("3_xk1r6")
+hframes = 2

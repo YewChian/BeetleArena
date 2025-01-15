@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bj33352ioa6dj"]
+
+[ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_mxqm5"]
+[ext_resource type="Script" path="res://Carapace/GiraffeWeevilCarapace.gd" id="2_wgl78"]
+[ext_resource type="Texture2D" uid="uid://droykrfi61au" path="res://Assets/Carapace/GiraffeWeevilCarapace.png" id="3_o6wct"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x5lj"]
+radius = 117.0
+height = 454.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ads6"]
+radius = 169.0
+height = 348.0
+
+[node name="GiraffeWeevilCarapace" instance=ExtResource("1_mxqm5")]
+script = ExtResource("2_wgl78")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_o6wct")
+
+[node name="Skeleton" parent="." index="1"]
+position = Vector2(0, 134)
+shape = SubResource("CapsuleShape2D_0x5lj")
+
+[node name="Hurtbox" parent="." index="2"]
+position = Vector2(0, 92)
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, 179)
+shape = SubResource("CapsuleShape2D_8ads6")
