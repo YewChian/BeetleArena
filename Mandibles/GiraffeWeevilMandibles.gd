@@ -7,4 +7,4 @@ func initialise_stats():
 			part_name = key
 	assert(part_name != "")		# part name should be found in PartsInfo.name_to_path
 	str = 1
-	WallDetector_mandible_attachment_vector = Vector2(0, -490)
+	WallDetector_mandible_attachment_vector = Vector2(0, -648)

@@ -6,7 +6,7 @@
 [node name="LadybugLegRight" instance=ExtResource("1_6d6du")]
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(138, -141)
+position = Vector2(135, -138)
 texture = ExtResource("2_c2ayf")
 hframes = 2
 frame = 1

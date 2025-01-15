@@ -19,6 +19,26 @@ var enemy_beetles_per_difficulty = {
 			"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
 			"right_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn"),
 			"nature": "Evil",
+			"bonus_end": 1,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+		},
+		"Randy the Rancid": {
+			"mandibles": load("res://Mandibles/CockroachMandibles.tscn"),
+			"carapace": load("res://Carapace/CockroachCarapace.tscn"),
+			"left_leg": load("res://Legs/CockroachLegs/CockroachLeftLeg.tscn"),
+			"right_leg": load("res://Legs/CockroachLegs/CockroachRightLeg.tscn"),
+			"nature": "Gross",
+			"bonus_end": 1,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+		},
+		"Tommy the Thick": {
+			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
+			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
+			"left_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn"),
+			"right_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleRightLeg.tscn"),
+			"nature": "Brave",
 			"bonus_end": 0,
 			"bonus_str": 0,
 			"bonus_spd": 0,
@@ -70,7 +90,8 @@ func initialize_player_beetles():
 		new_beetle.team = 0
 		add_child(new_beetle)
 		new_beetle.global_position = Vector2(1280, 0)
-		var healthbar_container = $UI/HealthbarVBox.get_child(i)
+		var healthbar_container = load("res://UI/ArenaHealthbarContainer.tscn").instantiate()
+		$UI/HealthbarVBox.add_child(healthbar_container)
 		healthbar_container.beetle =  new_beetle
 		healthbar_container.visible = true
 		await healthbar_container.initialize_healthbar()
@@ -86,9 +107,9 @@ func initialize_player_beetles():
 		new_beetle.direction = Vector2(1,0)
 		new_beetle.rotation_degrees = 90
 		new_beetle.team = 1
-		var healthbar_container = $UI/HealthbarVBox.get_child(i)
-		healthbar_container.beetle =  new_beetle
-		healthbar_container.visible = true
+		var healthbar_container = load("res://UI/ArenaHealthbarContainer.tscn").instantiate()
+		$UI/HealthbarVBox.add_child(healthbar_container)
+		healthbar_container.beetle = new_beetle
 		await healthbar_container.initialize_healthbar()
 		i += 1
 			

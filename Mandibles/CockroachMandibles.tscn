@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cftgsicuu3wc3"]
+
+[ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_m4aq2"]
+[ext_resource type="Script" path="res://Mandibles/CockroachMandibles.gd" id="2_hnv70"]
+[ext_resource type="Texture2D" uid="uid://lnic3d01pgo4" path="res://Assets/Mandibles/CockroachMandible.png" id="3_evr1d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5sjg"]
+radius = 77.0
+height = 154.0
+
+[node name="CockroachMandibles" instance=ExtResource("1_m4aq2")]
+script = ExtResource("2_hnv70")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -41)
+texture = ExtResource("3_evr1d")
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2(0, -29)
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, -25)
+shape = SubResource("CapsuleShape2D_a5sjg")

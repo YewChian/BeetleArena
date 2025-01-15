@@ -8,6 +8,6 @@
 script = ExtResource("2_f6d35")
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(-149, -67)
+position = Vector2(-120, -230)
 texture = ExtResource("3_xk1r6")
 hframes = 2

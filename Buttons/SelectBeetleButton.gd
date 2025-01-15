@@ -17,7 +17,7 @@ func _on_pressed():
 		"left_leg": beetle_left_leg,
 		"right_leg": beetle_right_leg,
 		"nature": beetle_nature,
-		"bonus_end": 0,
+		"bonus_end": 1,
 		"bonus_str": 0,
 		"bonus_spd": 0,
 	}
