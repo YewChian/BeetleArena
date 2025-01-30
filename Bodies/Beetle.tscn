@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpkc2rctcbg64"]
+[gd_scene load_steps=6 format=3 uid="uid://cpkc2rctcbg64"]
 
 [ext_resource type="Script" path="res://Bodies/Beetle.gd" id="1_yt4jj"]
 [ext_resource type="Texture2D" uid="uid://4mj3s76wmtak" path="res://Assets/Beetle.png" id="2_4nato"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_60n20"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qr2in"]
 radius = 47.0
 height = 94.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkg1l"]
 
 [node name="Beetle" type="CharacterBody2D" groups=["Beetles"]]
 collision_layer = 2
@@ -38,12 +41,25 @@ texture = ExtResource("2_4nato")
 [node name="InvulnerableTimer" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="End" type="Label" parent="."]
-offset_left = 38.0
-offset_top = 1.0
-offset_right = 78.0
-offset_bottom = 24.0
-scale = Vector2(5, 5)
+[node name="Nickname" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -67.5
+offset_right = 0.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_60n20")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 96
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wkg1l")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="StateTimer" to="." method="_on_state_timer_timeout"]
 [connection signal="body_entered" from="WallDetector" to="." method="_on_wall_detector_body_entered"]
