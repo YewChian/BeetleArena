@@ -16,6 +16,7 @@ height = 348.0
 script = ExtResource("2_wgl78")
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -125)
 texture = ExtResource("3_o6wct")
 
 [node name="Skeleton" parent="." index="1"]
@@ -23,7 +24,7 @@ position = Vector2(0, 134)
 shape = SubResource("CapsuleShape2D_0x5lj")
 
 [node name="Hurtbox" parent="." index="2"]
-position = Vector2(0, 92)
+position = Vector2(0, -33)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(0, 179)

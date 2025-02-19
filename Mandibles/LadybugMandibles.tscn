@@ -5,14 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://btsqqnpm0rwfs" path="res://Assets/Mandibles/LadybugMandible.png" id="2_bhawo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_863ln"]
-radius = 65.0
-height = 164.0
+radius = 97.0
+height = 194.0
 
 [node name="LadybugMandibles" instance=ExtResource("1_dlk2q")]
 script = ExtResource("2_5wuoi")
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(-1, -72)
 texture = ExtResource("2_bhawo")
 
+[node name="Hitbox" parent="." index="1"]
+position = Vector2(0, -78)
+
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(0, 25)
 shape = SubResource("CapsuleShape2D_863ln")

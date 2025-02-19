@@ -6,14 +6,18 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_863ln"]
 radius = 65.0
-height = 552.0
+height = 654.0
 
 [node name="GiraffeWeevilMandibles" instance=ExtResource("1_7qtab")]
 script = ExtResource("2_6f000")
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -149)
 texture = ExtResource("3_d8y1w")
 
+[node name="Hitbox" parent="." index="1"]
+position = Vector2(2, -91)
+
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(0, -205)
+position = Vector2(0, -228)
 shape = SubResource("CapsuleShape2D_863ln")

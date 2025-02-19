@@ -29,7 +29,6 @@ func _ready():
 	
 	
 func initialise_WallDetector_attachment():
-	print($Carapace.get_children()[0].WallDetector_carapace_attachment_vector)
 	$WallDetector.position = $Mandibles.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
 
 
@@ -39,9 +38,6 @@ func initialise_leg_attachment():
 
 
 func initialise_stats():
-	#spd = 1
-	#str = 1
-	#end = 2
 	base_spd += get_node("LeftLeg").get_children()[0].base_spd
 	aggro_spd += get_node("LeftLeg").get_children()[0].aggro_spd
 	str += get_node("Mandibles").get_children()[0].str
@@ -50,19 +46,9 @@ func initialise_stats():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
-	#for debugging
-	$End.text = str(end)
-	#########
 	match state:
 		Wander:
-			if end <= 0:
-				enter_state(Death)
-				
 			move_and_collide(direction * base_spd * 100)
-		
-		Pivot:
-			if end <= 0:
-				enter_state(Death)
 				
 		Death:
 			pass
@@ -127,6 +113,9 @@ func hurtbox_area_entered(area):
 		$Carapace.get_child(0).get_node("AnimationPlayer").play("flash_red")
 		is_invulnerable = true
 		end -= 1
+		if end <= 0 and state != Death:
+			enter_state(Death)
+			return
 		$InvulnerableTimer.start()
 
 

@@ -12,7 +12,11 @@ height = 332.0
 script = ExtResource("2_wgcjt")
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 100)
 texture = ExtResource("2_j5if8")
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2(0, 120)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(0, -286)
