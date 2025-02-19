@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://2vplyi4f6yff"]
 
 [ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_3omgl"]
-[ext_resource type="PackedScene" uid="uid://dny0nfowdbk2d" path="res://Buttons/free_beetle.tscn" id="1_vt1dm"]
-[ext_resource type="PackedScene" uid="uid://cktx3mkohi3vp" path="res://Buttons/random.tscn" id="2_tf8qu"]
-[ext_resource type="PackedScene" uid="uid://b502pbqkyjbgq" path="res://Buttons/combat.tscn" id="3_ls0ie"]
-[ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Buttons/free_item.tscn" id="5_1y7q1"]
-[ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Buttons/forge.tscn" id="6_60e8i"]
+[ext_resource type="PackedScene" uid="uid://dny0nfowdbk2d" path="res://Events/Buttons/free_beetle.tscn" id="1_vt1dm"]
+[ext_resource type="PackedScene" uid="uid://cktx3mkohi3vp" path="res://Events/Buttons/random.tscn" id="2_tf8qu"]
+[ext_resource type="PackedScene" uid="uid://b502pbqkyjbgq" path="res://Events/Buttons/combat.tscn" id="3_ls0ie"]
+[ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Events/Buttons/free_item.tscn" id="5_1y7q1"]
+[ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Events/Buttons/forge.tscn" id="6_60e8i"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="7_0roct"]
 
 [node name="Node2D" type="Control"]

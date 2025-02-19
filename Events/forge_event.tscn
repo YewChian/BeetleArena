@@ -112,4 +112,5 @@ polygon = PackedVector2Array(103, -108, -344, -148, -362, 144, 113, 129, 288, 28
 texture = ExtResource("1_dcup2")
 
 [connection signal="pressed" from="CanvasLayer/RightBar/ForgeOrSkip/Forge" to="." method="_on_forge_pressed"]
+[connection signal="pressed" from="CanvasLayer/RightBar/ForgeOrSkip/Skip" to="." method="_on_skip_pressed"]
 [connection signal="confirmed" from="CanvasLayer/AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
