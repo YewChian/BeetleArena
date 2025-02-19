@@ -14,7 +14,7 @@ func _ready() -> void:
 	event = randi_range(1,3)
 	print(str(event))
 	$CanvasLayer/VBoxContainer/TextureRect.texture=load("res://Assets/Backgrounds/random_event_"+str(event)+".png")
-	$CanvasLayer/VBoxContainer/Option_1.string= ""
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
