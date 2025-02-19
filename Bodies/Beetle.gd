@@ -95,6 +95,21 @@ func enter_state(new_state):
 			await $Carapace.get_children()[0].fade_out()
 			get_tree().current_scene.on_beetle_death(self)
 			queue_free()
+
+func enhance_with_shrine():
+	Inventory.beetles[nickname]["bonus_end"] += 1
+
+func burn():
+	var temp_carapace = Inventory.beetles[nickname]["carapace"].instantiate()
+	await temp_carapace.initialise_stats()
+	var carapace_end = temp_carapace.end
+	Inventory.beetles[nickname]["bonus_end"] = (carapace_end * -1) + 1
+	
+	var temp_leg = Inventory.beetles[nickname]["left_leg"].instantiate()
+	await temp_leg.initialise_stats()
+	var leg_speed = temp_leg.base_spd
+	Inventory.beetles[nickname]["bonus_spd"] = leg_speed * -1
+	
 		
 func _on_state_timer_timeout():
 	match state:

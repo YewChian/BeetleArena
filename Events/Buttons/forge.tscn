@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2dqig3aqge5q"]
 
 [ext_resource type="Texture2D" uid="uid://laco71rgbqne" path="res://Assets/UI/ForgeButton.png" id="1_x57rb"]
-[ext_resource type="Script" path="res://Buttons/forge.gd" id="2_m4yej"]
+[ext_resource type="Script" path="res://Events/Buttons/forge.gd" id="2_m4yej"]
 
 [node name="Forge" type="TextureButton"]
 anchors_preset = 15
