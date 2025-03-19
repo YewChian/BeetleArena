@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cktx3mkohi3vp"]
 
 [ext_resource type="Texture2D" uid="uid://57qai7rqixkv" path="res://Assets/UI/RandomButton.png" id="1_nk2tx"]
-[ext_resource type="Script" path="res://Events/Buttons/random.gd" id="2_nsffp"]
+[ext_resource type="Script" uid="uid://cpks3lqhvosvu" path="res://Events/Buttons/random.gd" id="2_nsffp"]
 
 [node name="Random" type="TextureButton"]
 texture_normal = ExtResource("1_nk2tx")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b725jq0jx1wbu"]
 
 [ext_resource type="PackedScene" uid="uid://cpkc2rctcbg64" path="res://Bodies/Beetle.tscn" id="1_0xjm0"]
-[ext_resource type="Script" path="res://Bodies/Fly.gd" id="2_0ra40"]
+[ext_resource type="Script" uid="uid://bw2s25gofwdyy" path="res://Bodies/Fly.gd" id="2_0ra40"]
 [ext_resource type="PackedScene" uid="uid://fw0pny7rgwss" path="res://Legs/BearPaws/BearPawsRight.tscn" id="2_xpn6r"]
 [ext_resource type="PackedScene" uid="uid://bhgsphk3bsxcs" path="res://Mandibles/lobster.tscn" id="3_j2pjs"]
 [ext_resource type="PackedScene" uid="uid://cs5olsf8xcf86" path="res://Carapace/FlyCarapace.tscn" id="4_ab6iq"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://vlpllpiftwd6"]
 
-[ext_resource type="Script" path="res://Events/ForgeEvent.gd" id="1_81scc"]
+[ext_resource type="Script" uid="uid://cs1f47egu0uuc" path="res://Events/ForgeEvent.gd" id="1_81scc"]
 [ext_resource type="Texture2D" uid="uid://d1nay2emdu4m5" path="res://Assets/Backgrounds/FORGE.png" id="1_dcup2"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_tu8uh"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_lus45"]
-[ext_resource type="Script" path="res://Events/ConfirmForgeButton.gd" id="4_y75av"]
+[ext_resource type="Script" uid="uid://344kc1djr5tp" path="res://Events/ConfirmForgeButton.gd" id="4_y75av"]
 
 [node name="ForgeEvent" type="Node2D"]
 script = ExtResource("1_81scc")

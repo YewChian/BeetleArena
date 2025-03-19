@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://do3v24h4yuxfb"]
 
 [ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_7wadc"]
-[ext_resource type="Script" path="res://Carapace/TigerBeetleCarapace.gd" id="2_hkatb"]
+[ext_resource type="Script" uid="uid://cqis3xj6qrrgc" path="res://Carapace/TigerBeetleCarapace.gd" id="2_hkatb"]
 [ext_resource type="Texture2D" uid="uid://cb5kuwcmy60li" path="res://Assets/Carapace/TigerBeetleCarapace.png" id="3_t27tc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x5lj"]

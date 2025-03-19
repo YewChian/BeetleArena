@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://rhmmpa4aqs1s"]
 
-[ext_resource type="Script" path="res://Events/BeetleListElement.gd" id="1_0jtel"]
+[ext_resource type="Script" uid="uid://cjt6tvs0xxe2i" path="res://Events/BeetleListElement.gd" id="1_0jtel"]
 
 [node name="BeetleListElement" type="HBoxContainer"]
 anchors_preset = 15

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cpkc2rctcbg64"]
 
-[ext_resource type="Script" path="res://Bodies/Beetle.gd" id="1_yt4jj"]
+[ext_resource type="Script" uid="uid://cdtgdtald0lb" path="res://Bodies/Beetle.gd" id="1_yt4jj"]
 [ext_resource type="Texture2D" uid="uid://4mj3s76wmtak" path="res://Assets/Beetle.png" id="2_4nato"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_60n20"]
 

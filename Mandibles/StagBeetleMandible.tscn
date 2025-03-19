@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_radw3"]
 [ext_resource type="Texture2D" uid="uid://ufpu358dfw2v" path="res://Assets/Mandibles/StagBeetleMandible.png" id="2_j5if8"]
-[ext_resource type="Script" path="res://Mandibles/StagBeetleMandible.gd" id="2_wgcjt"]
+[ext_resource type="Script" uid="uid://bvd6wa4tya5ki" path="res://Mandibles/StagBeetleMandible.gd" id="2_wgcjt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5sjg"]
 radius = 148.0

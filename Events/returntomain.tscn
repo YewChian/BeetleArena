@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7p4xbu3c7hra"]
 
 [ext_resource type="Texture2D" uid="uid://62o5k41nh25l" path="res://Assets/UI/FreeItemButton.png" id="1_ve7jc"]
-[ext_resource type="Script" path="res://Events/returntomain.gd" id="2_ux6tx"]
+[ext_resource type="Script" uid="uid://dpwj03sda2k3a" path="res://Events/returntomain.gd" id="2_ux6tx"]
 
 [node name="Returntomain" type="Control"]
 layout_mode = 3

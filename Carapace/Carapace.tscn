@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://byvbd0l1bw2eh"]
 
-[ext_resource type="Script" path="res://Carapace/Carapace.gd" id="1_v0bwk"]
+[ext_resource type="Script" uid="uid://dd0lokj3pyrrt" path="res://Carapace/Carapace.gd" id="1_v0bwk"]
 
 [sub_resource type="Animation" id="Animation_dyxqg"]
 length = 0.001
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wbdsb"]
 _data = {
-"RESET": SubResource("Animation_dyxqg"),
-"flash_red": SubResource("Animation_saecs")
+&"RESET": SubResource("Animation_dyxqg"),
+&"flash_red": SubResource("Animation_saecs")
 }
 
 [node name="Carapace" type="CharacterBody2D" groups=["Carapace"]]

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b502pbqkyjbgq" path="res://Events/Buttons/combat.tscn" id="3_ls0ie"]
 [ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Events/Buttons/free_item.tscn" id="5_1y7q1"]
 [ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Events/Buttons/forge.tscn" id="6_60e8i"]
-[ext_resource type="Script" path="res://Camera2D.gd" id="7_0roct"]
+[ext_resource type="Script" uid="uid://lle23s6w1x2d" path="res://Camera2D.gd" id="7_0roct"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3

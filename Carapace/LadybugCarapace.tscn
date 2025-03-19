@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://byvbd0l1bw2eh" path="res://Carapace/Carapace.tscn" id="1_7n172"]
 [ext_resource type="Texture2D" uid="uid://cu5ugsali8k5m" path="res://Assets/Carapace/LadybugCarapace.png" id="2_1s4wc"]
-[ext_resource type="Script" path="res://Carapace/LadybugCarapace.gd" id="2_cqvt5"]
+[ext_resource type="Script" uid="uid://dk1s54w1tpd87" path="res://Carapace/LadybugCarapace.gd" id="2_cqvt5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_as186"]
 radius = 164.0

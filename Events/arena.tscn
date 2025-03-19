@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://iqvmh1opgbwg"]
 
 [ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_4w7x4"]
-[ext_resource type="Script" path="res://Events/Arena.gd" id="1_oq4ge"]
+[ext_resource type="Script" uid="uid://cnec4g4qpln0l" path="res://Events/Arena.gd" id="1_oq4ge"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="4_ngfcw"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="7_0jb3m"]
 

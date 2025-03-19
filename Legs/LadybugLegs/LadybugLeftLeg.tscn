@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://casu874iwsjf8"]
 
 [ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_eonsr"]
-[ext_resource type="Script" path="res://Legs/LadybugLegs/LadybugLeftLeg.gd" id="2_dgwam"]
+[ext_resource type="Script" uid="uid://tocf7xg2k6pc" path="res://Legs/LadybugLegs/LadybugLeftLeg.gd" id="2_dgwam"]
 [ext_resource type="Texture2D" uid="uid://whq1o6wafg26" path="res://Assets/Legs/LadybugLegs.png" id="2_pghkv"]
 
 [node name="LadybugLeftLeg" instance=ExtResource("1_eonsr")]

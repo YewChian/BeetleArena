@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://1ovf82rex3fm"]
 
-[ext_resource type="Script" path="res://UI/HealthbarContainer.gd" id="1_5jgjv"]
+[ext_resource type="Script" uid="uid://dn5g6h2vlfyg5" path="res://UI/HealthbarContainer.gd" id="1_5jgjv"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="2_tq21q"]
 [ext_resource type="Texture2D" uid="uid://dwfgoq6665frc" path="res://Assets/UI/HealthbarUnder.png" id="3_50dua"]
 [ext_resource type="Texture2D" uid="uid://cs1keje7vduiu" path="res://Assets/UI/HealthbarProgress.png" id="4_hh0m2"]

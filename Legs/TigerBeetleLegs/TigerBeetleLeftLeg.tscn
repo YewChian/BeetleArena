@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3c80lh2j7sk0"]
 
 [ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_u3d1i"]
-[ext_resource type="Script" path="res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.gd" id="2_nvrp7"]
+[ext_resource type="Script" uid="uid://dcppufc4y5vhp" path="res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.gd" id="2_nvrp7"]
 [ext_resource type="Texture2D" uid="uid://d21yry2k8uc5l" path="res://Assets/Legs/TigerBeetleLegs.png" id="3_c5ine"]
 
 [node name="TigerBeetleLeftLeg" instance=ExtResource("1_u3d1i")]

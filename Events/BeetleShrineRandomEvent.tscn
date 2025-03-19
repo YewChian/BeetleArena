@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfwntn2ttan1c"]
 
-[ext_resource type="Script" path="res://Events/BeetleShrineRandomEvent.gd" id="1_k0qyp"]
+[ext_resource type="Script" uid="uid://cb7pby2esmh2t" path="res://Events/BeetleShrineRandomEvent.gd" id="1_k0qyp"]
 [ext_resource type="Texture2D" uid="uid://b5n7ampfrrxo0" path="res://Assets/Backgrounds/random_event_1.png" id="2_sjtl2"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="3_jbtgn"]
 

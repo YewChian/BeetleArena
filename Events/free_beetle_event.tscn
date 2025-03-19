@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ggjrx03m4jtf"]
 
-[ext_resource type="Script" path="res://Events/FreeBeetleEvent.gd" id="1_fgsk1"]
+[ext_resource type="Script" uid="uid://cvkgenecu2hom" path="res://Events/FreeBeetleEvent.gd" id="1_fgsk1"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_kkdcy"]
 [ext_resource type="Texture2D" uid="uid://dufhehk10vlwk" path="res://Assets/Backgrounds/TREE.png" id="1_xiqcd"]
 [ext_resource type="Texture2D" uid="uid://dw5d3kc7dwowe" path="res://Assets/Backgrounds/TREELEAVES.png" id="2_3j4ua"]

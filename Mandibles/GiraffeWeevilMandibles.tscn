@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dj8ulwllx6m6h"]
 
 [ext_resource type="PackedScene" uid="uid://bgu3cevlf6dej" path="res://Mandibles/mandible.tscn" id="1_7qtab"]
-[ext_resource type="Script" path="res://Mandibles/GiraffeWeevilMandibles.gd" id="2_6f000"]
+[ext_resource type="Script" uid="uid://cetgghgft25v7" path="res://Mandibles/GiraffeWeevilMandibles.gd" id="2_6f000"]
 [ext_resource type="Texture2D" uid="uid://bi4qr4b6h410n" path="res://Assets/Mandibles/GiraffeWeevilMandibles.png" id="3_d8y1w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_863ln"]
