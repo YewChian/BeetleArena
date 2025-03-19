@@ -72,6 +72,9 @@ func _on_game_over_yo_area_entered(area):
 
 
 func _on_map_button_pressed() -> void:
+	if %NameLineEdit.text in Inventory.beetles:
+		%MinigameOverLabel.text = "You already have a beetle with this name."
+		return
 	var new_nickname = %NameLineEdit.text
 	Inventory.beetles[new_nickname] = beetle_pool[obtained_beetle_nickname]
 

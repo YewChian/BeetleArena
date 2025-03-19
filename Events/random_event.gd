@@ -2,7 +2,11 @@ extends CanvasLayer
 @onready var event
 
 var events = [
-	"res://Events/BeetleShrineRandomEvent.tscn",
+	#"res://Events/BeetleShrineRandomEvent.tscn",
+	#"res://Events/FreeItemRandomEvent.tscn",
+	#"res://Events/BeetleTradeRandomEvent.tscn",
+	#"res://Events/PeckishPeteRandomEvent.tscn",
+	"res://Events/SurvivalRandomEvent.tscn",
 ]
 
 func event_1(): 
