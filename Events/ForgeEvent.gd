@@ -103,8 +103,8 @@ func _on_forge_pressed() -> void:
 
 func _on_accept_dialog_confirmed() -> void:
 	Inventory.beetles[main_beetle.nickname] = temp_beetle_info
-	get_tree().change_scene_to_file("res://Mapc.tscn")
+	get_tree().change_scene_to_file("res://Map.tscn")
 
 
 func _on_skip_pressed() -> void:
-	get_tree().change_scene_to_file("res://Mapc.tscn")
+	get_tree().change_scene_to_file("res://Map.tscn")
