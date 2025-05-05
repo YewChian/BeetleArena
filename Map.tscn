@@ -14,10 +14,10 @@ anchors_preset = 0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 72.0
-offset_top = -145.0
-offset_right = 712.0
-offset_bottom = 815.0
+offset_left = -579.0
+offset_top = -313.0
+offset_right = 1341.0
+offset_bottom = 1127.0
 texture = ExtResource("1_3omgl")
 
 [node name="Combat1A" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]

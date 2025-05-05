@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_vx5s8"]
 [ext_resource type="Script" uid="uid://b7p7fn4vw2ej5" path="res://Events/SurvivalRandomEvent.gd" id="2_vx5s8"]
-[ext_resource type="Texture2D" uid="uid://b8nmor3ib5eks" path="res://Assets/Backgrounds/random_event_0.png" id="3_hpg2l"]
+[ext_resource type="Texture2D" uid="uid://caedh6vl5fuvg" path="res://Assets/Backgrounds/SURVIVALOFTHEFITTEST.png" id="3_vx5s8"]
 
 [node name="SurvivalRandomEvent" type="Control"]
 layout_mode = 3
@@ -14,7 +14,7 @@ script = ExtResource("2_vx5s8")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("3_hpg2l")
+texture = ExtResource("3_vx5s8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

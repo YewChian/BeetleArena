@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx421hq6aqr7v"]
+
+[ext_resource type="Texture2D" uid="uid://byiybaj2tcpg2" path="res://Assets/Backgrounds/FREEITEM.png" id="1_l5p1h"]
+[ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="2_ut657"]
+
+[node name="FreeItemEvent" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 640.0
+offset_bottom = 960.0
+texture = ExtResource("1_l5p1h")
+stretch_mode = 2
+
+[node name="Returntomain" parent="CanvasLayer" instance=ExtResource("2_ut657")]
+offset_left = 337.0
+offset_top = 526.0
+offset_right = 337.0
+offset_bottom = 526.0
