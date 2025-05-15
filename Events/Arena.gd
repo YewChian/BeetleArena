@@ -3,18 +3,31 @@ extends Node2D
 #enemy beetles per difficulty from 0 to 3
 var enemy_beetles_per_difficulty = {
 	0: {
-		#"Herbert the Hurtful": {
-			#"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
-			#"carapace": load("res://Carapace/LadybugCarapace.tscn"),
-			#"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
-			#"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
-			#"nature": "Brave",
-			#"bonus_end": 0,
-			#"bonus_str": 0,
-			#"bonus_spd": 0,
-		#},
-		# debug
-		"Grant the Gargantuan": {
+		"Herbert the Hurtful": {
+			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
+			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
+			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
+			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+		}
+	},
+	1: {
+		"Randy the Rancid": {
+			"mandibles": load("res://Mandibles/CockroachMandibles.tscn"),
+			"carapace": load("res://Carapace/CockroachCarapace.tscn"),
+			"left_leg": load("res://Legs/CockroachLegs/CockroachLeftLeg.tscn"),
+			"right_leg": load("res://Legs/CockroachLegs/CockroachRightLeg.tscn"),
+			"nature": "Gross",
+			"bonus_end": 1,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+			}
+		},
+	2: {
+	"Grant the Gargantuan": {
 			"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
 			"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
 			"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
@@ -23,8 +36,24 @@ var enemy_beetles_per_difficulty = {
 			"bonus_end": 1,
 			"bonus_str": 0,
 			"bonus_spd": 0,
+			}
 		},
-		#"Randy the Rancid": {
+		
+	3: {
+			"Tommy the Thick": {
+			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
+			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
+			"left_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn"),
+			"right_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+			}
+		}
+} 
+		
+#"Randy the Rancid": {
 			#"mandibles": load("res://Mandibles/CockroachMandibles.tscn"),
 			#"carapace": load("res://Carapace/CockroachCarapace.tscn"),
 			#"left_leg": load("res://Legs/CockroachLegs/CockroachLeftLeg.tscn"),
@@ -44,30 +73,7 @@ var enemy_beetles_per_difficulty = {
 			#"bonus_str": 0,
 			#"bonus_spd": 0,
 		#},
-	},
-	1: {
-		"Diane the Dreary": {
-			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
-			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
-			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
-			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
-			"nature": "Brave",
-			"bonus_end": 0,
-			"bonus_str": 0,
-			"bonus_spd": 0,
-		},
-		"Leon the Laughable": {
-			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
-			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
-			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
-			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
-			"nature": "Brave",
-			"bonus_end": 0,
-			"bonus_str": 0,
-			"bonus_spd": 0,
-		},
-	}
-}
+
 
 
 # Called when the node enters the scene tree for the first time.

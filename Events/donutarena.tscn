@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnebd8ymiv18w"]
+
+[ext_resource type="Script" uid="uid://cnec4g4qpln0l" path="res://Events/Arena.gd" id="1_lfjaf"]
+[ext_resource type="Texture2D" path="res://Events/magnetmap.png" id="2_f60pf"]
+[ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="3_jpwe3"]
+[ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="4_ms2om"]
+
+[node name="donut" type="Node2D"]
+script = ExtResource("1_lfjaf")
+
+[node name="Arena1Sprite" type="StaticBody2D" parent="." groups=["Wall"]]
+collision_mask = 10
+
+[node name="ArenaBoundaryCollision" type="CollisionPolygon2D" parent="Arena1Sprite"]
+polygon = PackedVector2Array(3506, -438, 3518, 2954, 2463, 3590, -1696, 3758, -3326, 3614, -4153, 1876, -4298, -3125, -3231, -3518, -536, -3585, 3499, -3569, 2481, -2840, 1041, -2975, 634, -2721, 583, -382, 24, 161, -604, -178, -739, -2297, -1180, -3077, -2570, -2924, -3028, -2467, -2943, 178, -2858, 1754, -2384, 2839, -1214, 2958, 1651, 2839, 2481, 2263, 2821, 1161, 2905, -1365, 2719, -2518, 2522, -2809, 3811, -4160)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena1Sprite"]
+texture = ExtResource("2_f60pf")
+
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.15, 0.15)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HealthbarVBox" type="VBoxContainer" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Returntomain" parent="UI" instance=ExtResource("3_jpwe3")]
+offset_left = -3788.0
+offset_top = -2649.0
+offset_right = -3788.0
+offset_bottom = -2649.0
+scale = Vector2(10, 10)
+
+[node name="VictoryMarginContainer" type="MarginContainer" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ms2om")
+theme_override_constants/margin_left = 512
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 512
+theme_override_constants/margin_bottom = 128
+
+[node name="VictoryPanelContainer" type="PanelContainer" parent="UI/VictoryMarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VictoryMarginContainer/VictoryPanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="UI/VictoryMarginContainer/VictoryPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "REWARDS
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RewardList" type="VBoxContainer" parent="UI/VictoryMarginContainer/VictoryPanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+
+[node name="Done" type="Button" parent="UI/VictoryMarginContainer/VictoryPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 10
+text = "BACK TO MAP"
+
+[node name="DefeatMarginContainer" type="MarginContainer" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ms2om")
+theme_override_constants/margin_left = 512
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 512
+theme_override_constants/margin_bottom = 128
+
+[node name="DefeatPanelContainer" type="PanelContainer" parent="UI/DefeatMarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/DefeatMarginContainer/DefeatPanelContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="UI/DefeatMarginContainer/DefeatPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"HeaderLarge"
+text = "DEFEAT
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefeatLabel" type="Label" parent="UI/DefeatMarginContainer/DefeatPanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 512)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToTitle" type="Button" parent="UI/DefeatMarginContainer/DefeatPanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 8
+text = "BACK TO TITLE"
+
+[node name="FadeOutCM" type="CanvasModulate" parent="."]
+unique_name_in_owner = true
+
+[connection signal="pressed" from="UI/VictoryMarginContainer/VictoryPanelContainer/VBoxContainer/Done" to="." method="_on_done_pressed"]
+[connection signal="pressed" from="UI/DefeatMarginContainer/DefeatPanelContainer/VBoxContainer/BackToTitle" to="." method="_on_back_to_title_pressed"]
