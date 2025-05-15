@@ -3,8 +3,8 @@ extends CanvasLayer
 
 var events = [
 	#"res://Events/BeetleShrineRandomEvent.tscn",
-	"res://Events/BeetleTradeRandomEvent.tscn",
-	#"res://Events/PeckishPeteRandomEvent.tscn",
+	#"res://Events/BeetleTradeRandomEvent.tscn",
+	"res://Events/PeckishPeteRandomEvent.tscn",
 	#"res://Events/SurvivalRandomEvent.tscn",
 ]
 
