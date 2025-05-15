@@ -97,7 +97,7 @@ func _on_element_pressed(element):
 	main_beetle.global_position = Vector2(909, 249)
 	main_beetle.scale = Vector2(0.1, 0.1)
 	main_beetle.base_spd = 0
-	is_traded = true
+	#is_traded = true
 	%Trade.disabled = false
 	%Trade.text = "TRADE " + element.beetle_name + " FOR A RANDOM BEETLE?"
 	
@@ -115,6 +115,8 @@ func _on_trade_pressed() -> void:
 	available_beetles.shuffle()
 	new_beetle = available_beetles[0]
 	%NameLineEdit.visible = true
+	Inventory.beetles.erase(main_beetle.nickname)
+	main_beetle.visible = false
 
 
 func _process(delta: float) -> void:

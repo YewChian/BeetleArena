@@ -1,21 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://iqvmh1opgbwg"]
+[gd_scene load_steps=6 format=3 uid="uid://iqvmh1opgbwg"]
 
-[ext_resource type="Texture2D" uid="uid://cydjm1giugtj7" path="res://Assets/Arenas/BEETLEARENA1.png" id="1_4w7x4"]
 [ext_resource type="Script" uid="uid://cnec4g4qpln0l" path="res://Events/Arena.gd" id="1_oq4ge"]
+[ext_resource type="Texture2D" uid="uid://dorjj7boanlcd" path="res://Assets/Backgrounds/grassbackground.png" id="2_l5hlt"]
+[ext_resource type="Texture2D" uid="uid://ck1q4uhrk6w3s" path="res://Assets/Arenas/BEETLEARENA.png" id="3_l5hlt"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="4_ngfcw"]
 [ext_resource type="PackedScene" uid="uid://b7p4xbu3c7hra" path="res://Events/returntomain.tscn" id="7_0jb3m"]
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_oq4ge")
 
+[node name="GrassBackground" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("2_l5hlt")
+
 [node name="Arena1Sprite" type="StaticBody2D" parent="." groups=["Wall"]]
 collision_mask = 10
 
 [node name="ArenaBoundaryCollision" type="CollisionPolygon2D" parent="Arena1Sprite"]
-polygon = PackedVector2Array(-2535, -2284, -1552, -2890, -91, -3025, 1392, -2854, 2439, -2206, 2753, -1315, 2454, 1408, 1534, 2627, -176, 2905, -1901, 2734, -2678, 2413, -2899, 1130, -2977, -666, -2578, -2213, -2193, -1899, -2664, -445, -2507, 538, -2372, 617, -2400, 1529, -1908, 2270, -732, 2555, 394, 2448, 1484, 2028, 1933, 1550, 2176, 823, 2062, -502, 2297, -1044, 2133, -1635, 1498, -2391, -141, -2633, -1474, -2505, -2151, -1928)
+polygon = PackedVector2Array(-4789, -3849, -3152, -4873, -1280, -5147, 1473, -4785, 3506, -4408, 5646, -2521, 5722, 1390, 4455, 4164, 684, 4619, -2024, 4564, -4386, 3730, -5363, 1287, -5472, -1054, -4843, -3827, -2193, -1899, -2664, -445, -2507, 538, -2372, 617, -2400, 1529, -1908, 2270, -732, 2555, 394, 2448, 1484, 2028, 1933, 1550, 2176, 823, 2062, -502, 2297, -1044, 2133, -1635, 1498, -2391, -141, -2633, -1474, -2505, -2151, -1928)
 
 [node name="Sprite2D" type="Sprite2D" parent="Arena1Sprite"]
-texture = ExtResource("1_4w7x4")
+texture = ExtResource("3_l5hlt")
 
 [node name="Terrain" type="Node2D" parent="."]
 

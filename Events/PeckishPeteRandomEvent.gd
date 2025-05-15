@@ -19,9 +19,10 @@ func _ready() -> void:
 
 func _on_leave_pressed() -> void:
 	%EndDialog.visible = true
-	if is_traded:
+	if len(Inventory.beetles) == 0:	
 		%EndDialog.visible = true
-		%EndDialog.dialog_text = "Go away, bird."
+		%EndDialog.dialog_text = "You ran out of beetles. You lose."
+		%EndDialog.ok_button_text = "BACK TO TITLE"
 
 	else:
 		%EndDialog.visible = true
@@ -43,6 +44,10 @@ func _on_element_pressed(element):
 	
 
 func _on_end_dialog_confirmed() -> void:
+	if %EndDialog.ok_button_text == "BACK TO TITLE":
+		await RunManager.start_new_run()
+		return
+	
 	if is_satisfied or is_home:
 		get_tree().change_scene_to_file("res://Map.tscn")
 	else:

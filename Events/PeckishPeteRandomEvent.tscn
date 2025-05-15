@@ -11,6 +11,7 @@ theme = ExtResource("1_6bsfy")
 script = ExtResource("2_6bsfy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_mnfsc")
@@ -30,10 +31,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -68.0
-offset_right = 77.0
-offset_bottom = 68.0
+offset_left = -218.5
+offset_top = 262.0
+offset_right = 218.5
+offset_bottom = 398.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -50,7 +51,7 @@ theme = ExtResource("1_6bsfy")
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
-text = "Hey. I’m Pete… got any Beetles? "
+text = "Hey. I'm Pete… got any Beetles? "
 
 [node name="NameLineEdit" type="LineEdit" parent="CanvasLayer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true

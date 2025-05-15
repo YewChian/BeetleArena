@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=23 format=3 uid="uid://kk2asmgd6tvj"]
 
 [ext_resource type="Script" uid="uid://cwh65nn485hkw" path="res://UI/StartRunScene.gd" id="1_jv30d"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
 [ext_resource type="Script" uid="uid://cw3dhyvgklx5j" path="res://Events/Buttons/SelectBeetleButton.gd" id="2_wtvvh"]
 [ext_resource type="Texture2D" uid="uid://det6ixr7btlfe" path="res://Assets/Buttons/LadybugButtonNormal.png" id="3_aflcc"]
+[ext_resource type="Texture2D" uid="uid://dorjj7boanlcd" path="res://Assets/Backgrounds/grassbackground.png" id="4_mh4x1"]
 [ext_resource type="Texture2D" uid="uid://jhnhir2w2bck" path="res://Assets/Buttons/LadybugButtonHover.png" id="4_tpym5"]
 [ext_resource type="Texture2D" uid="uid://cwxdtw3rk7j5a" path="res://Assets/Buttons/StagButtonNormal.png" id="5_1lit5"]
 [ext_resource type="Texture2D" uid="uid://x8rdsnsfbeqa" path="res://Assets/SplashArt/Ladybug.png" id="6_3axts"]
@@ -48,6 +49,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_mh4x1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Info"]
 layout_mode = 0
