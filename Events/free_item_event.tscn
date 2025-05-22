@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyjkxtlhaxqmf"]
+[gd_scene load_steps=4 format=3 uid="uid://csrygf22qn7fx"]
 
 [ext_resource type="Texture2D" uid="uid://byiybaj2tcpg2" path="res://Assets/Backgrounds/FREEITEM.png" id="1_4jt1t"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_ewo6m"]

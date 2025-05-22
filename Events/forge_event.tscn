@@ -21,9 +21,22 @@ offset_bottom = 533.0
 
 [node name="BeetleList" type="VBoxContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -262.0
+offset_right = 215.0
+offset_bottom = -204.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("3_lus45")
+
+[node name="Instructions" type="Label" parent="CanvasLayer/BeetleList"]
+layout_mode = 2
+text = "PICK A BEETLE TO UPGRADE"
 
 [node name="RightBar" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 11
@@ -42,6 +55,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Header" type="Label" parent="CanvasLayer/RightBar/MandibleBox"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
@@ -56,6 +70,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Header" type="Label" parent="CanvasLayer/RightBar/CarapaceBox"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
@@ -69,6 +84,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Header" type="Label" parent="CanvasLayer/RightBar/LegsBox"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
@@ -98,7 +114,8 @@ text = "SKIP"
 unique_name_in_owner = true
 initial_position = 1
 size = Vector2i(143, 100)
-dialog_text = "are you sure tho"
+ok_button_text = "YES"
+dialog_text = "ARE YOU SURE?"
 
 [node name="Anvil" type="StaticBody2D" parent="." groups=["Wall"]]
 z_index = -1
@@ -106,7 +123,7 @@ z_as_relative = false
 collision_mask = 10
 
 [node name="AnvilCollision" type="CollisionPolygon2D" parent="Anvil"]
-polygon = PackedVector2Array(365, -376, -552, -364, -642, 348, 262, 373, 611, 93, 235, 19, 91, 107, -323, 118, -291, -116, 71, -95, 239, 17, 582, 81)
+polygon = PackedVector2Array(3952, -11902, -8936, -6375, -9632, 6357, 3816, 10003, 11329, 1359, 235, 19, 91, 107, -323, 118, -291, -116, 71, -95, 239, 17, 11412, 1352)
 
 [node name="Sprite2D" type="Sprite2D" parent="Anvil"]
 texture = ExtResource("1_dcup2")

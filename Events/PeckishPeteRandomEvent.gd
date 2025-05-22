@@ -4,6 +4,7 @@ var main_beetle: Object
 var beetle_list_element_resource: Resource = preload("res://Events/BeetleListElement.tscn")
 var is_traded = false
 var total_stats: int = 0
+#var pete_hunger = 1
 var pete_hunger = 5
 var is_satisfied = false
 var is_home = true
@@ -80,8 +81,22 @@ func _on_pete_talks_pressed() -> void:
 	if total_stats > pete_hunger:
 		is_home = false
 		is_satisfied = true
+		Inventory.beetles["Terry the Thick"] = {
+			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
+			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
+			"left_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn"),
+			"right_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+		}
 		%EndDialog.visible = true
-		%EndDialog.dialog_text = "Sift through poo..."
+		if len(Inventory.beetles) == 0:	
+			%EndDialog.dialog_text = "You ran out of beetles. You lose."
+			%EndDialog.ok_button_text = "BACK TO TITLE"
+		else:
+			%EndDialog.dialog_text = "Sift through poo..."
 		
 	else:
 		is_home = false

@@ -109,6 +109,7 @@ placeholder_text = "Give your bug a name..."
 alignment = 1
 
 [node name="MapButton" type="Button" parent="CanvasLayer/MinigameOverUI"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Confirm and return to map"

@@ -8,7 +8,7 @@ var selected_part_button: Object = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	%AcceptDialog.add_cancel_button("cancel bro")
+	%AcceptDialog.add_cancel_button("CANCEL")
 	
 	for beetle_name in Inventory.beetles:
 		var new_element = beetle_list_element_resource.instantiate()
@@ -54,8 +54,10 @@ func _on_part_button_pressed(element):
 	match temp_part.get_groups()[0]:
 		"Mandible":
 			main_beetle_info["mandibles"] = element.part
+			main_beetle.get_node("Mandibles").get_child(0).get_node("Hitbox/CollisionShape2D").disabled = true
 		"Carapace":
 			main_beetle_info["carapace"] = element.part
+			main_beetle.get_node("Carapace").get_child(0).get_node("Hurtbox/CollisionShape2D").disabled = true
 		"Legs":
 			main_beetle_info["left_leg"] = element.part
 			var temp_leg = element.part.instantiate()
@@ -90,6 +92,8 @@ func _on_element_pressed(element):
 	add_child(main_beetle)
 	main_beetle.global_position = Vector2(0,0)
 	main_beetle.scale = Vector2(0.1, 0.1)
+	main_beetle.get_node("Carapace").get_child(0).get_node("Hurtbox/CollisionShape2D").disabled = true
+	main_beetle.get_node("Mandibles").get_child(0).get_node("Hitbox/CollisionShape2D").disabled = true
 
 
 func _on_forge_pressed() -> void:
@@ -97,7 +101,7 @@ func _on_forge_pressed() -> void:
 	var temp_part = selected_part_button.part.instantiate()
 	add_child(temp_part)
 	temp_part.visible = false
-	%AcceptDialog.dialog_text = "You sure you wanna forge " + main_beetle.nickname + " with " + temp_part.part_name + "?"
+	%AcceptDialog.dialog_text = "Do you want to forge " + main_beetle.nickname + " with " + temp_part.part_name + "?"
 	temp_part.queue_free()
 
 

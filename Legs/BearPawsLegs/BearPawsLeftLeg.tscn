@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpj72i5p4ub0k"]
+
+[ext_resource type="PackedScene" uid="uid://uh1pv58hcx8s" path="res://Legs/LeftLeg.tscn" id="1_0p72p"]
+[ext_resource type="Texture2D" uid="uid://88bfo4ycjsbs" path="res://Assets/Legs/BearPaws.png" id="2_8uju2"]
+[ext_resource type="Script" uid="uid://dup8y85sogo40" path="res://Legs/BearPawsLegs/BearPawsLeftLeg.gd" id="2_blcpl"]
+
+[node name="BearPawsLeft" instance=ExtResource("1_0p72p")]
+script = ExtResource("2_blcpl")
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-26, -3)
+texture = ExtResource("2_8uju2")
+hframes = 2

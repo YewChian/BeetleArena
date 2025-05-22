@@ -33,6 +33,27 @@ var beetle_pool: Dictionary = {
 		"bonus_str": 1,
 		"bonus_spd": 0,
 	},
+	"Smelly Guy": {
+		"mandibles": load("res://Mandibles/CockroachMandibles.tscn"),
+		"carapace": load("res://Carapace/CockroachCarapace.tscn"),
+		"left_leg": load("res://Legs/CockroachLegs/CockroachLeftLeg.tscn"),
+		"right_leg": load("res://Legs/CockroachLegs/CockroachRightLeg.tscn"),
+		"nature": "Gross",
+		"bonus_end": 1,
+		"bonus_str": 0,
+		"bonus_spd": 0,
+	},
+	"Spookybugger": {
+		"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
+		"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
+		"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
+		"right_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn"),
+		"nature": "Evil",
+		"bonus_end": 0,
+		"bonus_str": 0,
+		"bonus_spd": 0,
+	},
+	#stag
 }
 
 
@@ -54,7 +75,9 @@ func _process(delta):
 
 
 func minigame_over():
-	%MinigameOverLabel.visible = true
+	%MinigameOverUI.visible = true
+	%NameLineEdit.visible = false
+	%MapButton.visible = false
 	%MinigameOverLabel.text = "Damn... why didn't you click the beetle...."
 	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Map.tscn")

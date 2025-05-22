@@ -6,6 +6,6 @@ func initialise_stats():
 		if PartsInfo.name_to_path[key] == scene_file_path:
 			part_name = key
 	assert(part_name != "")		# part name should be found in PartsInfo.name_to_path
-	base_spd = 3
+	base_spd = 5
 	aggro_spd = 20
-	right_leg = load("res://Legs/TigerBeetleLegs/TigerBeetleRightLeg.tscn")
+	right_leg = load("res://Legs/BearPawsLegs/BearPawsRightLeg.tscn")

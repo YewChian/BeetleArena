@@ -17,6 +17,8 @@ func initialise_stats():
 	
 
 func _on_hurtbox_area_entered(area):
+	if area.get_parent().is_in_group("Mandible") == false:
+		return
 	var beetle_parent = get_parent().get_parent()
 	beetle_parent.hurtbox_area_entered(area)
 

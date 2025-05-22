@@ -48,7 +48,8 @@ func initialise_stats():
 func _physics_process(_delta):
 	match state:
 		Wander:
-			move_and_collide(direction * base_spd * 100)
+			#move_and_collide(direction * base_spd * 100)
+			move_and_collide(direction * base_spd * 25)
 				
 		Death:
 			pass

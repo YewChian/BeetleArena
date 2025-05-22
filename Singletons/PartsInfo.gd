@@ -16,4 +16,5 @@ const name_to_path = {
 	"Gemstone Guard": "res://Carapace/TigerBeetleCarapace.tscn",
 	"Murderous Maw": "res://Mandibles/TigerBeetleMandibles.tscn",
 	"Bicep Triceps": "res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn",
+	#"Secret Strikers": "res://Legs/BearPawsLegs/BearPawsLeftLeg.tscn",
 }

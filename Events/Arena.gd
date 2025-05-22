@@ -110,7 +110,7 @@ func initialize_player_beetles():
 	for nickname in enemy_inventory:
 		new_beetle = Inventory.assemble_beetle(nickname, enemy_inventory[nickname])
 		add_child(new_beetle)
-		new_beetle.global_position = Vector2(640, 0)
+		new_beetle.global_position = Vector2(-640, 0)
 		new_beetle.direction = Vector2(1,0)
 		new_beetle.rotation_degrees = 90
 		new_beetle.team = 1
