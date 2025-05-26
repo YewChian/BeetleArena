@@ -243,11 +243,11 @@ func on_beetle_death(beetle: Object):
 		return
 	
 	print(ArenaInfo.current_difficulty)
-	if team1_count == 0 and ArenaInfo.current_difficulty >= 3:
+	if team1_count == 0 and ArenaInfo.current_difficulty >= 4:
 		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file("res://UI/VictoryScene.tscn")
 		
-	if team1_count == 0 and ArenaInfo.current_difficulty < 3:
+	if team1_count == 0 and ArenaInfo.current_difficulty < 4:
 		await start_arena_victory_sequence()
 		return
 	

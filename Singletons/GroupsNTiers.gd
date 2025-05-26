@@ -2,8 +2,7 @@ extends Node
 
 var group_dictionary = {
 "Combat1A" : 1,
-"Random1B" : 1,
-"Combat1C" : 1,
+"Combat1B" : 1,
 "FreeItem2A" : 2, 
 "Forge3A" : 3,
 "Random3B" : 3,

@@ -23,27 +23,20 @@ texture = ExtResource("1_3omgl")
 
 [node name="Combat1A" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
-offset_left = 217.0
-offset_top = 747.0
-offset_right = 281.0
-offset_bottom = 811.0
+offset_left = 257.0
+offset_top = 752.0
+offset_right = 321.0
+offset_bottom = 816.0
 
-[node name="Random1B" parent="." groups=["1"] instance=ExtResource("2_tf8qu")]
-layout_mode = 0
-offset_left = 334.0
-offset_top = 753.0
-offset_right = 398.0
-offset_bottom = 817.0
-
-[node name="Combat1C" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
+[node name="Combat1B" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 449.0
-offset_top = 754.0
-offset_right = 513.0
-offset_bottom = 818.0
+offset_left = 409.0
+offset_top = 746.0
+offset_right = 473.0
+offset_bottom = 810.0
 grow_horizontal = 1
 grow_vertical = 1
 

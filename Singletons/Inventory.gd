@@ -8,7 +8,7 @@ var spare_parts = [
 	#load("res://Carapace/StagBeetleCarapace.tscn"),	# for debugging
 	#load("res://Carapace/LadybugCarapace.tscn"),	# for debugging
 	#load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),	# for debugging
-	#load("res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn"),	# for debugging
+	load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),	# for debugging
 ]
 
 
