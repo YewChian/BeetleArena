@@ -27,7 +27,7 @@ var enemy_beetles_per_difficulty = {
 			}
 		},
 	2: {
-	"Grant the Gargantuan": {
+		"Grant the Gargantuan": {
 			"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
 			"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
 			"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
@@ -40,7 +40,7 @@ var enemy_beetles_per_difficulty = {
 		},
 		
 	3: {
-			"Tommy the Thick": {
+		"Tommy the Thick": {
 			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
 			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
 			"left_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn"),
@@ -49,8 +49,18 @@ var enemy_beetles_per_difficulty = {
 			"bonus_end": 0,
 			"bonus_str": 0,
 			"bonus_spd": 0,
-			}
-		}
+		},
+		"Micro the Meatball": {
+			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
+			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
+			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
+			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 4,
+		},
+	}
 } 
 		
 #"Randy the Rancid": {
