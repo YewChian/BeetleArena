@@ -129,6 +129,9 @@ func _on_wall_detector_body_entered(body):
 
 func hurtbox_area_entered(area):
 	var area_owner = area.get_parent().get_parent().get_parent()
+	if area_owner.is_in_group("Beetles") == false:
+		return
+
 	if area_owner.team != team and is_invulnerable == false:
 		$Carapace.get_child(0).get_node("AnimationPlayer").play("flash_red")
 		is_invulnerable = true
