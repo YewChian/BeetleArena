@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2vplyi4f6yff"]
+[gd_scene load_steps=9 format=3 uid="uid://2vplyi4f6yff"]
 
 [ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_3omgl"]
 [ext_resource type="PackedScene" uid="uid://dny0nfowdbk2d" path="res://Events/Buttons/free_beetle.tscn" id="1_vt1dm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Events/Buttons/free_item.tscn" id="5_1y7q1"]
 [ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Events/Buttons/forge.tscn" id="6_60e8i"]
 [ext_resource type="Script" uid="uid://dtmp33ae6cpwe" path="res://Camera2D.gd" id="7_0roct"]
+[ext_resource type="Texture2D" uid="uid://ddkr158wponll" path="res://Assets/UI/bosspng.png" id="7_vm4q1"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -22,171 +23,207 @@ texture = ExtResource("1_3omgl")
 
 [node name="Combat1A" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
-offset_left = 243.0
-offset_top = 707.0
-offset_right = 307.0
-offset_bottom = 771.0
+offset_left = 217.0
+offset_top = 747.0
+offset_right = 281.0
+offset_bottom = 811.0
 
-[node name="Combat1B" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
+[node name="Random1B" parent="." groups=["1"] instance=ExtResource("2_tf8qu")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 365.0
-offset_top = 701.0
-offset_right = 429.0
-offset_bottom = 765.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = 334.0
+offset_top = 753.0
+offset_right = 398.0
+offset_bottom = 817.0
 
 [node name="Combat1C" parent="." groups=["1"] instance=ExtResource("3_ls0ie")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 487.0
-offset_top = 700.0
-offset_right = 551.0
-offset_bottom = 764.0
+offset_left = 449.0
+offset_top = 754.0
+offset_right = 513.0
+offset_bottom = 818.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Forge2A" parent="." groups=["2"] instance=ExtResource("6_60e8i")]
+[node name="FreeItem2A" parent="." groups=["2"] instance=ExtResource("5_1y7q1")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 237.0
-offset_top = 599.0
-offset_right = 301.0
-offset_bottom = 663.0
+offset_left = 334.0
+offset_top = 671.0
+offset_right = 398.0
+offset_bottom = 735.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Random2B" parent="." groups=["2"] instance=ExtResource("2_tf8qu")]
+[node name="Forge3A" parent="." groups=["3"] instance=ExtResource("6_60e8i")]
 layout_mode = 0
-offset_left = 351.0
-offset_top = 599.0
-offset_right = 415.0
-offset_bottom = 663.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 210.0
+offset_top = 587.0
+offset_right = 274.0
+offset_bottom = 651.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="Forge2C" parent="." groups=["2"] instance=ExtResource("6_60e8i")]
+[node name="Random3B" parent="." groups=["3"] instance=ExtResource("2_tf8qu")]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 586.0
+offset_right = 395.0
+offset_bottom = 650.0
+
+[node name="Forge3C" parent="." groups=["3"] instance=ExtResource("6_60e8i")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 462.0
+offset_top = 598.0
+offset_right = 526.0
+offset_bottom = 662.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat4A" parent="." groups=["4"] instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 202.0
+offset_top = 499.0
+offset_right = 266.0
+offset_bottom = 563.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat4B" parent="." groups=["4"] instance=ExtResource("3_ls0ie")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 331.0
+offset_top = 503.0
+offset_right = 395.0
+offset_bottom = 567.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Combat4C" parent="." groups=["4"] instance=ExtResource("3_ls0ie")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 474.0
-offset_top = 599.0
+offset_top = 510.0
 offset_right = 538.0
-offset_bottom = 663.0
+offset_bottom = 574.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Combat3A" parent="." groups=["3"] instance=ExtResource("3_ls0ie")]
+[node name="FreeBeetle5A" parent="." groups=["5"] instance=ExtResource("1_vt1dm")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 295.0
-offset_top = 498.0
-offset_right = 359.0
-offset_bottom = 562.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = 272.0
+offset_top = 438.0
+offset_right = 336.0
+offset_bottom = 502.0
 
-[node name="Combat3B" parent="." groups=["3"] instance=ExtResource("3_ls0ie")]
+[node name="FreeBeetle5B" parent="." groups=["5"] instance=ExtResource("1_vt1dm")]
 layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 440.0
-offset_top = 499.0
-offset_right = 504.0
-offset_bottom = 563.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = 414.0
+offset_top = 436.0
+offset_right = 478.0
+offset_bottom = 500.0
 
-[node name="FreeBeetle4A" parent="." groups=["3", "4"] instance=ExtResource("1_vt1dm")]
+[node name="Random6A" parent="." groups=["6"] instance=ExtResource("2_tf8qu")]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 394.0
-offset_right = 288.0
-offset_bottom = 458.0
+offset_left = 212.0
+offset_top = 345.0
+offset_right = 276.0
+offset_bottom = 409.0
 
-[node name="FreeItem4B" parent="." groups=["4"] instance=ExtResource("5_1y7q1")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 358.0
-offset_top = 399.0
-offset_right = 422.0
-offset_bottom = 463.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="FreeBeetle4C" parent="." groups=["4"] instance=ExtResource("1_vt1dm")]
-layout_mode = 0
-offset_left = 497.0
-offset_top = 394.0
-offset_right = 561.0
-offset_bottom = 458.0
-
-[node name="Random5A" parent="." groups=["5"] instance=ExtResource("2_tf8qu")]
-layout_mode = 0
-offset_left = 255.0
-offset_top = 300.0
-offset_right = 319.0
-offset_bottom = 364.0
-
-[node name="Forge5B" parent="." groups=["5"] instance=ExtResource("6_60e8i")]
+[node name="Forge6B" parent="." groups=["6"] instance=ExtResource("6_60e8i")]
 layout_mode = 1
-offset_left = 467.0
-offset_top = 307.0
-offset_right = 531.0
-offset_bottom = 371.0
+offset_left = 346.0
+offset_top = 339.0
+offset_right = 410.0
+offset_bottom = 403.0
 
-[node name="Combat6A" parent="." groups=["6"] instance=ExtResource("3_ls0ie")]
+[node name="Combat6C" parent="." groups=["6"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
-offset_left = 253.0
-offset_top = 196.0
-offset_right = 317.0
-offset_bottom = 260.0
+offset_left = 482.0
+offset_top = 342.0
+offset_right = 546.0
+offset_bottom = 406.0
 
-[node name="Combat6B" parent="." groups=["6"] instance=ExtResource("3_ls0ie")]
+[node name="Combat7A" parent="." groups=["7"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
-offset_left = 464.0
-offset_top = 202.0
-offset_right = 528.0
-offset_bottom = 266.0
+offset_left = 274.0
+offset_top = 256.0
+offset_right = 338.0
+offset_bottom = 320.0
 
-[node name="FreeBeetle7A" parent="." groups=["7"] instance=ExtResource("1_vt1dm")]
+[node name="Combat7B" parent="." groups=["7"] instance=ExtResource("3_ls0ie")]
+layout_mode = 1
+offset_left = 409.0
+offset_top = 253.0
+offset_right = 473.0
+offset_bottom = 317.0
+
+[node name="FreeBeetle8A" parent="." groups=["8"] instance=ExtResource("1_vt1dm")]
 layout_mode = 0
-offset_left = 218.0
-offset_top = 85.0
-offset_right = 282.0
-offset_bottom = 149.0
+offset_left = 212.0
+offset_top = 172.0
+offset_right = 276.0
+offset_bottom = 236.0
 
-[node name="FreeItem7B" parent="." groups=["7"] instance=ExtResource("5_1y7q1")]
+[node name="FreeItem8B" parent="." groups=["8"] instance=ExtResource("5_1y7q1")]
+layout_mode = 1
+offset_left = 343.0
+offset_top = 183.0
+offset_right = 407.0
+offset_bottom = 247.0
+
+[node name="Forge8C" parent="." groups=["8"] instance=ExtResource("6_60e8i")]
+layout_mode = 1
+offset_left = 463.0
+offset_top = 177.0
+offset_right = 527.0
+offset_bottom = 241.0
+
+[node name="Combat9A" parent="." groups=["9"] instance=ExtResource("3_ls0ie")]
+layout_mode = 1
+offset_left = 273.0
+offset_top = 74.0
+offset_right = 337.0
+offset_bottom = 138.0
+
+[node name="Combat9B" parent="." groups=["9"] instance=ExtResource("3_ls0ie")]
+layout_mode = 1
+offset_left = 410.0
+offset_top = 78.0
+offset_right = 474.0
+offset_bottom = 142.0
+
+[node name="Forge10A" parent="." groups=["10"] instance=ExtResource("6_60e8i")]
+layout_mode = 1
+offset_left = 353.0
+offset_top = 5.0
+offset_right = 417.0
+offset_bottom = 69.0
+
+[node name="Combat11A" parent="." groups=["11"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
 offset_left = 354.0
-offset_top = 88.0
-offset_right = 418.0
-offset_bottom = 152.0
-
-[node name="Forge7C" parent="." groups=["7"] instance=ExtResource("6_60e8i")]
-layout_mode = 1
-offset_left = 485.0
-offset_top = 85.0
-offset_right = 549.0
-offset_bottom = 149.0
-
-[node name="Combat8" parent="." groups=["8"] instance=ExtResource("3_ls0ie")]
-layout_mode = 1
-offset_left = 356.0
-offset_top = -30.0
-offset_right = 420.0
-offset_bottom = 34.0
+offset_top = -98.0
+offset_right = 431.0
+offset_bottom = -12.0
+texture_normal = ExtResource("7_vm4q1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(392, 670)
