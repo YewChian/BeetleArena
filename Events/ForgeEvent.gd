@@ -81,6 +81,7 @@ func _on_part_button_pressed(element):
 	main_beetle.direction = old_direction
 	main_beetle.rotation = old_rotation
 	main_beetle.scale = Vector2(0.1, 0.1)
+	main_beetle.base_spd *= 0.1
 	
 
 func _on_element_pressed(element):

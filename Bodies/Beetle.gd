@@ -98,11 +98,15 @@ func enter_state(new_state):
 			await $Mandibles.get_children()[0].disable_hitbox()
 			await $Carapace.get_children()[0].disable_hurtbox()
 			await $Carapace.get_children()[0].fade_out()
+			if RunManager.is_hardcore:
+				Inventory.beetles.erase(nickname)
 			get_tree().current_scene.on_beetle_death(self)
 			queue_free()
 
+
 func enhance_with_shrine():
 	Inventory.beetles[nickname]["bonus_end"] += 1
+
 
 func burn():
 	var temp_carapace = Inventory.beetles[nickname]["carapace"].instantiate()

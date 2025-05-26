@@ -77,7 +77,7 @@ var enemy_beetles_per_difficulty = {
 		#},
 		
 	4: {
-			"Tommy the Thick": {
+		"Tommy the Thick": {
 			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
 			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
 			"left_leg": load("res://Legs/TigerBeetleLegs/TigerBeetleLeftLeg.tscn"),
@@ -88,7 +88,7 @@ var enemy_beetles_per_difficulty = {
 			"bonus_spd": 0,
 			},
 		
-			"Micro the Meatball": {
+		"Micro the Meatball": {
 			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
 			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
 			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),

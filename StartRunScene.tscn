@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=24 format=3 uid="uid://kk2asmgd6tvj"]
 
 [ext_resource type="Script" uid="uid://cwh65nn485hkw" path="res://UI/StartRunScene.gd" id="1_jv30d"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cl7k5wo62q8t0" path="res://Carapace/StagBeetleCarapace.tscn" id="15_34xk0"]
 [ext_resource type="PackedScene" uid="uid://b5akp8ch011e3" path="res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn" id="16_1peb4"]
 [ext_resource type="PackedScene" uid="uid://03jx71jb2mtw" path="res://Legs/StagBeetleLegs/StagBeetleRightLeg.tscn" id="17_cb01e"]
+[ext_resource type="Script" uid="uid://cx8hyi2dexys8" path="res://UI/Checkbox.gd" id="21_ctnba"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mh8s"]
 
@@ -155,6 +156,12 @@ size_flags_horizontal = 3
 placeholder_text = "NAME YOUR BUG"
 alignment = 1
 
+[node name="CheckBox" type="CheckBox" parent="MarginContainer2/StartRunContainer"]
+layout_mode = 2
+text = "HARDCORE"
+alignment = 1
+script = ExtResource("21_ctnba")
+
 [node name="StartRunButton" type="Button" parent="MarginContainer2/StartRunContainer"]
 layout_mode = 2
 text = "BUG OUT!!!"
@@ -163,4 +170,5 @@ script = ExtResource("6_k3mop")
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle1Button" to="MarginContainer/HBoxContainer/SelectBeetle1Button" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle2Button" to="MarginContainer/HBoxContainer/SelectBeetle2Button" method="_on_pressed"]
 [connection signal="text_changed" from="MarginContainer2/StartRunContainer/InputName" to="." method="_on_input_name_text_changed"]
+[connection signal="toggled" from="MarginContainer2/StartRunContainer/CheckBox" to="MarginContainer2/StartRunContainer/CheckBox" method="_on_toggled"]
 [connection signal="pressed" from="MarginContainer2/StartRunContainer/StartRunButton" to="MarginContainer2/StartRunContainer/StartRunButton" method="_on_pressed"]
