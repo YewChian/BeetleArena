@@ -1,5 +1,7 @@
 extends Node
 
+var is_stag_unlocked = false
+
 func start_new_run():
 	Inventory.beetles = {}
 	Inventory.spare_parts = []

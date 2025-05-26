@@ -190,7 +190,9 @@ func _on_done_pressed() -> void:
 
 
 func _on_back_to_title_pressed() -> void:
-	RunManager.start_new_run()
-	Inventory.beetles = {}
-	Inventory.spare_parts = []
+	if ArenaInfo.current_difficulty >= 3:
+		get_tree().change_scene_to_file("res://UI/VictoryScene.tscn")
+	else:
+		get_tree().change_scene_to_file("res://UI/DefeatScene.tscn")
+
 	
