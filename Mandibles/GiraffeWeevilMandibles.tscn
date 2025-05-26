@@ -19,5 +19,5 @@ texture = ExtResource("3_d8y1w")
 position = Vector2(2, -91)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-position = Vector2(0, -228)
+position = Vector2(0, -257)
 shape = SubResource("CapsuleShape2D_863ln")

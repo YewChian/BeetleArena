@@ -14,6 +14,7 @@ func _on_open_chest_pressed() -> void:
 	var parts = PartsInfo.name_to_path.keys()
 	parts.shuffle()
 	var new_part = parts[0]
+	Inventory.spare_parts.append(load(PartsInfo.name_to_path[new_part]))
 	%NewPart.texture = load(PartsInfo.name_to_path[new_part]).instantiate().get_node("Sprite2D").texture
 	%OpenChest.disabled = true
 	%Leave.disabled = false

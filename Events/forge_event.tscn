@@ -120,13 +120,13 @@ dialog_text = "ARE YOU SURE?"
 [node name="Anvil" type="StaticBody2D" parent="." groups=["Wall"]]
 z_index = -1
 z_as_relative = false
-collision_mask = 10
-
-[node name="AnvilCollision" type="CollisionPolygon2D" parent="Anvil"]
-polygon = PackedVector2Array(3952, -11902, -8936, -6375, -9632, 6357, 3816, 10003, 11329, 1359, 235, 19, 91, 107, -323, 118, -291, -116, 71, -95, 239, 17, 11412, 1352)
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="Anvil"]
 texture = ExtResource("1_dcup2")
+
+[node name="AnvilCollision" type="CollisionPolygon2D" parent="Anvil"]
+polygon = PackedVector2Array(3952, -11902, -8936, -6375, -9632, 6357, 3816, 10003, 11329, 1359, 713, -3, 235, 315, -734, 390, -750, -480, 19, -379, 713, -9, 11412, 1352)
 
 [connection signal="pressed" from="CanvasLayer/RightBar/ForgeOrSkip/Forge" to="." method="_on_forge_pressed"]
 [connection signal="pressed" from="CanvasLayer/RightBar/ForgeOrSkip/Skip" to="." method="_on_skip_pressed"]

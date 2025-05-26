@@ -74,6 +74,7 @@ func enter_state(new_state):
 			state = Pivot
 			$StateTimer.stop()
 			var pivot_start_lag = 1
+			#var pivot_start_lag = 0.1
 			await get_tree().create_timer(pivot_start_lag).timeout
 			
 			var temp_tween = get_tree().create_tween()
@@ -81,8 +82,10 @@ func enter_state(new_state):
 			var rotation_direction = randi_range(0,1)
 			if rotation_direction == 0:	#left
 				temp_tween.tween_property(self, "rotation", rotation - PI, 1.0)
+				#temp_tween.tween_property(self, "rotation", rotation - PI, 0.01)
 			elif rotation_direction == 1:	#right
 				temp_tween.tween_property(self, "rotation", rotation + PI, 1.0)
+				#temp_tween.tween_property(self, "rotation", rotation - PI, 0.01)
 			direction = direction.rotated(PI)
 			
 			await temp_tween.finished
