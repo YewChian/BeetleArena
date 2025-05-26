@@ -28,6 +28,7 @@ func _ready():
 	enter_state(Wander)
 	
 	
+	
 func initialise_WallDetector_attachment():
 	$WallDetector.position = $Mandibles.get_children()[0].WallDetector_mandible_attachment_vector + $Carapace.get_children()[0].WallDetector_carapace_attachment_vector
 

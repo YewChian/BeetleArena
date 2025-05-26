@@ -92,6 +92,7 @@ func _on_element_pressed(element):
 	add_child(main_beetle)
 	main_beetle.global_position = Vector2(0,0)
 	main_beetle.scale = Vector2(0.1, 0.1)
+	main_beetle.base_spd *= 0.1
 	main_beetle.get_node("Carapace").get_child(0).get_node("Hurtbox/CollisionShape2D").disabled = true
 	main_beetle.get_node("Mandibles").get_child(0).get_node("Hitbox/CollisionShape2D").disabled = true
 

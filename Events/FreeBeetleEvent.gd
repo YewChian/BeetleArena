@@ -63,7 +63,10 @@ func _ready():
 	var random_beetle_name = beetle_pool.keys()[randi_range(0,len(beetle_pool.keys())-1)]
 	var random_beetle: Object = Inventory.assemble_beetle(random_beetle_name, beetle_pool[random_beetle_name])
 	random_beetle.scale = Vector2(0.2, 0.2)
+	print("before:", random_beetle.base_spd)
 	add_child(random_beetle)
+	random_beetle.base_spd *= 0.1 
+	print("after:", random_beetle.base_spd)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

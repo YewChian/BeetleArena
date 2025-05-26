@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://f6ewvi56tcrf"]
+[gd_scene load_steps=8 format=3 uid="uid://b5b8rohplp5hx"]
 
-[ext_resource type="Script" uid="uid://fiy7xoblaeu8" path="res://UI/VictoryDefeatScreen.gd" id="1_a2lyr"]
-[ext_resource type="Texture2D" uid="uid://d038307sy3es7" path="res://Assets/Backgrounds/winscreen.png" id="1_ui728"]
+[ext_resource type="Script" uid="uid://fiy7xoblaeu8" path="res://UI/VictoryDefeatScreen.gd" id="1_4pkve"]
+[ext_resource type="Texture2D" uid="uid://c7rl4g3man7or" path="res://Assets/Backgrounds/losescreen.png" id="2_4pkve"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2lyr"]
 
@@ -14,7 +14,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5n5y"]
 
 [node name="VictoryScene" type="CanvasLayer"]
-script = ExtResource("1_a2lyr")
+script = ExtResource("1_4pkve")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ui728")
+texture = ExtResource("2_4pkve")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 15

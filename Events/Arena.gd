@@ -79,7 +79,7 @@ var enemy_beetles_per_difficulty = {
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await initialize_player_beetles()
-
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -179,7 +179,12 @@ func on_beetle_death(beetle: Object):
 		await start_arena_defeat_sequence()
 		return
 	
-	if team1_count == 0:
+	print(ArenaInfo.current_difficulty)
+	if team1_count == 0 and ArenaInfo.current_difficulty >= 3:
+		await get_tree().create_timer(3).timeout
+		get_tree().change_scene_to_file("res://UI/VictoryScene.tscn")
+		
+	if team1_count == 0 and ArenaInfo.current_difficulty < 3:
 		await start_arena_victory_sequence()
 		return
 	
@@ -190,9 +195,6 @@ func _on_done_pressed() -> void:
 
 
 func _on_back_to_title_pressed() -> void:
-	if ArenaInfo.current_difficulty >= 3:
-		get_tree().change_scene_to_file("res://UI/VictoryScene.tscn")
-	else:
-		get_tree().change_scene_to_file("res://UI/DefeatScene.tscn")
+	get_tree().change_scene_to_file("res://UI/DefeatScene.tscn")
 
 	

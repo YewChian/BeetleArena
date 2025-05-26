@@ -20,7 +20,7 @@ position = Vector2(0, 213)
 texture = ExtResource("3_t27tc")
 
 [node name="Skeleton" parent="." index="1"]
-position = Vector2(0, 359)
+position = Vector2(0, 378)
 shape = SubResource("CapsuleShape2D_0x5lj")
 
 [node name="Hurtbox" parent="." index="2"]
