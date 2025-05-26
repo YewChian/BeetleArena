@@ -15,7 +15,6 @@ var disabled_dictionary = {
 "FreeBeetle5B" : 1,
 "Random6A" : 1,
 "Forge6B" : 1,
-"Combat6C" : 1,
 "Combat7A" : 1,
 "Combat7B" : 1,
 "FreeBeetle8A" : 1,

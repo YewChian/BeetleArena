@@ -15,7 +15,6 @@ var group_dictionary = {
 "FreeBeetle5B" : 5,
 "Random6A" : 6,
 "Forge6B" : 6,
-"Combat6C" : 6,
 "Combat7A" : 7,
 "Combat7B" : 7,
 "FreeBeetle8A" : 8,
