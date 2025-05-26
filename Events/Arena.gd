@@ -26,8 +26,34 @@ var enemy_beetles_per_difficulty = {
 			"bonus_spd": 0,
 			}
 		},
+		
 	2: {
-	"Grant the Gargantuan": {
+		"Jemimah the Just": {
+			"mandibles": load("res://Mandibles/StagBeetleMandible.tscn"),
+			"carapace": load("res://Carapace/StagBeetleCarapace.tscn"),
+			"left_leg": load("res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn"),
+			"right_leg": load("res://Legs/StagBeetleLegs/StagBeetleRightLeg.tscn"),
+			"nature": "Evil",
+			"bonus_end": 1,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+			},
+			
+			"Billy the Broken": {
+			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
+			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
+			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
+			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 0,
+			}
+		},	
+		
+		
+	3: {
+		"Grant the Gargantuan": {
 			"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
 			"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
 			"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
@@ -36,10 +62,21 @@ var enemy_beetles_per_difficulty = {
 			"bonus_end": 1,
 			"bonus_str": 0,
 			"bonus_spd": 0,
-			}
+			}			
 		},
+		#"Grant the Gargantuan": {
+			#"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
+			#"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
+			#"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
+			#"right_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn"),
+			#"nature": "Evil",
+			#"bonus_end": 1,
+			#"bonus_str": 0,
+			#"bonus_spd": 0,
+			#}
+		#},
 		
-	3: {
+	4: {
 			"Tommy the Thick": {
 			"mandibles": load("res://Mandibles/TigerBeetleMandibles.tscn"),
 			"carapace": load("res://Carapace/TigerBeetleCarapace.tscn"),
@@ -49,9 +86,35 @@ var enemy_beetles_per_difficulty = {
 			"bonus_end": 0,
 			"bonus_str": 0,
 			"bonus_spd": 0,
-			}
-		}
+			},
+		
+			"Micro the Meatball": {
+			"mandibles": load("res://Mandibles/LadybugMandibles.tscn"),
+			"carapace": load("res://Carapace/LadybugCarapace.tscn"),
+			"left_leg": load("res://Legs/LadybugLegs/LadybugLeftLeg.tscn"),
+			"right_leg": load("res://Legs/LadybugLegs/LadybugRightLeg.tscn"),
+			"nature": "Brave",
+			"bonus_end": 0,
+			"bonus_str": 0,
+			"bonus_spd": 3,	
+		},
+	} 
+
+		#
+			#"Grant the Gargantuan": {
+			#"mandibles": load("res://Mandibles/GiraffeWeevilMandibles.tscn"),
+			#"carapace": load("res://Carapace/GiraffeWeevilCarapace.tscn"),
+			#"left_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn"),
+			#"right_leg": load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn"),
+			#"nature": "Evil",
+			#"bonus_end": 1,
+			#"bonus_str": 0,
+			#"bonus_spd": 0,
+			#}
+		#},
 } 
+
+
 		
 #"Randy the Rancid": {
 			#"mandibles": load("res://Mandibles/CockroachMandibles.tscn"),
