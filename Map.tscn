@@ -142,24 +142,17 @@ offset_bottom = 500.0
 
 [node name="Random6A" parent="." groups=["6"] instance=ExtResource("2_tf8qu")]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 345.0
-offset_right = 276.0
-offset_bottom = 409.0
+offset_left = 218.0
+offset_top = 341.0
+offset_right = 282.0
+offset_bottom = 405.0
 
 [node name="Forge6B" parent="." groups=["6"] instance=ExtResource("6_60e8i")]
 layout_mode = 1
-offset_left = 346.0
-offset_top = 339.0
-offset_right = 410.0
-offset_bottom = 403.0
-
-[node name="Combat6C" parent="." groups=["6"] instance=ExtResource("3_ls0ie")]
-layout_mode = 1
-offset_left = 482.0
-offset_top = 342.0
-offset_right = 546.0
-offset_bottom = 406.0
+offset_left = 462.0
+offset_top = 344.0
+offset_right = 526.0
+offset_bottom = 408.0
 
 [node name="Combat7A" parent="." groups=["7"] instance=ExtResource("3_ls0ie")]
 layout_mode = 1
