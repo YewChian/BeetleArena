@@ -15,6 +15,7 @@ script = ExtResource("1_81scc")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Returntomain" parent="CanvasLayer" instance=ExtResource("2_tu8uh")]
+visible = false
 offset_left = 344.0
 offset_top = 533.0
 offset_right = 344.0

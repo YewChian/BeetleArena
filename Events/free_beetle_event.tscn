@@ -46,6 +46,7 @@ texture = ExtResource("2_3j4ua")
 scale = Vector2(0.5, 0.5)
 
 [node name="Returntomain" parent="." instance=ExtResource("2_5qi2h")]
+visible = false
 offset_left = -109.0
 offset_top = -127.0
 offset_right = -109.0
