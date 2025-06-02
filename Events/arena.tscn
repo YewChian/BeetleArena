@@ -130,5 +130,8 @@ text = "BACK TO TITLE"
 [node name="FadeOutCM" type="CanvasModulate" parent="."]
 unique_name_in_owner = true
 
+[node name="ArenaBGM" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
 [connection signal="pressed" from="UI/VictoryMarginContainer/VictoryPanelContainer/VBoxContainer/Done" to="." method="_on_done_pressed"]
 [connection signal="pressed" from="UI/DefeatMarginContainer/DefeatPanelContainer/VBoxContainer/BackToTitle" to="." method="_on_back_to_title_pressed"]

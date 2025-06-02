@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://iw2bfip7cq36"]
+[gd_scene load_steps=5 format=3 uid="uid://iw2bfip7cq36"]
 
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_6bsfy"]
 [ext_resource type="Script" uid="uid://dfjsc6c12rud8" path="res://Events/PeckishPeteRandomEvent.gd" id="2_6bsfy"]
 [ext_resource type="Texture2D" uid="uid://b7ofrkoe4026a" path="res://Assets/Backgrounds/PECKISHPETE.png" id="2_mnfsc"]
+[ext_resource type="AudioStream" uid="uid://gucv8pt2vkpe" path="res://Assets/Sounds/random_encounter_bgm.mp3" id="4_j5chg"]
 
 [node name="PeckishPeteRandomEvent" type="Control"]
 layout_mode = 3
@@ -74,6 +75,10 @@ collision_mask = 10
 
 [node name="AnvilCollision" type="CollisionPolygon2D" parent="Anvil"]
 polygon = PackedVector2Array(103, -108, -344, -148, -362, 144, 113, 129, 288, 28, 235, 19, 91, 107, -323, 118, -291, -116, 71, -95, 239, 17, 305, 29)
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_j5chg")
+autoplay = true
 
 [connection signal="confirmed" from="CanvasLayer/EndDialog" to="." method="_on_end_dialog_confirmed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/VBoxContainer/PeteTalks" to="." method="_on_pete_talks_pressed"]

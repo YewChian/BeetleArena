@@ -20,6 +20,8 @@ var turn_rate
 var direction = Vector2(-1,0.5)
 var is_invulnerable = false
 
+var is_playing_hit_sound = false
+
 
 func _ready():
 	initialise_stats()
@@ -49,8 +51,8 @@ func initialise_stats():
 func _physics_process(_delta):
 	match state:
 		Wander:
-			#move_and_collide(direction * base_spd * 100)
-			move_and_collide(direction * base_spd * 25)
+			move_and_collide(direction * base_spd * 100)
+			#move_and_collide(direction * base_spd * 25)
 				
 		Death:
 			pass
@@ -132,6 +134,13 @@ func _on_wall_detector_body_entered(body):
 
 
 func hurtbox_area_entered(area):
+	if is_playing_hit_sound == false:
+		is_playing_hit_sound = true
+		var hit_sound = AudioStreamPlayer2D.new()
+		add_child(hit_sound)
+		hit_sound.stream = load("res://Assets/Sounds/hit_sound.wav")
+		hit_sound.play()
+	
 	var area_owner = area.get_parent().get_parent().get_parent()
 	if area_owner.is_in_group("Beetles") == false:
 		return
@@ -144,6 +153,8 @@ func hurtbox_area_entered(area):
 			enter_state(Death)
 			return
 		$InvulnerableTimer.start()
+	
+	is_playing_hit_sound = false
 
 
 func _on_invulnerable_timer_timeout():

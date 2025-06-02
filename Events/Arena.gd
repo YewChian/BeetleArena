@@ -141,6 +141,18 @@ var enemy_beetles_per_difficulty = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	match ArenaInfo.current_difficulty:
+		0:	
+			%ArenaBGM.stream = load("res://Assets/Sounds/arena_0_bgm.mp3")
+		1:
+			%ArenaBGM.stream = load("res://Assets/Sounds/arena_1_bgm.mp3")
+		2:
+			%ArenaBGM.stream = load("res://Assets/Sounds/arena_2_bgm.mp3")
+		3:
+			%ArenaBGM.stream = load("res://Assets/Sounds/arena_3_bgm.mp3")
+		4:
+			%ArenaBGM.stream = load("res://Assets/Sounds/arena_4_bgm.mp3")
+	%ArenaBGM.play()
 	await initialize_player_beetles()
 	
 
@@ -173,7 +185,7 @@ func initialize_player_beetles():
 	for nickname in enemy_inventory:
 		new_beetle = Inventory.assemble_beetle(nickname, enemy_inventory[nickname])
 		add_child(new_beetle)
-		new_beetle.global_position = Vector2(-640, 0)
+		new_beetle.global_position = Vector2(-1240, 0)
 		new_beetle.direction = Vector2(1,0)
 		new_beetle.rotation_degrees = 90
 		new_beetle.team = 1

@@ -2,6 +2,7 @@ extends Node
 
 var is_stag_unlocked = false
 var is_hardcore: bool = false
+@onready var bgm = AudioStreamPlayer2D.new()
 
 func start_new_run():
 	Inventory.beetles = {}

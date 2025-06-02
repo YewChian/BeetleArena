@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2vplyi4f6yff"]
+[gd_scene load_steps=10 format=3 uid="uid://2vplyi4f6yff"]
 
 [ext_resource type="Texture2D" uid="uid://bx6k2siwavo30" path="res://Assets/UI/PathBackground.png" id="1_3omgl"]
 [ext_resource type="PackedScene" uid="uid://dny0nfowdbk2d" path="res://Events/Buttons/free_beetle.tscn" id="1_vt1dm"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://b502pbqkyjbgq" path="res://Events/Buttons/combat.tscn" id="3_ls0ie"]
 [ext_resource type="PackedScene" uid="uid://do0ujgr4psaji" path="res://Events/Buttons/free_item.tscn" id="5_1y7q1"]
 [ext_resource type="PackedScene" uid="uid://d2dqig3aqge5q" path="res://Events/Buttons/forge.tscn" id="6_60e8i"]
-[ext_resource type="Script" uid="uid://dtmp33ae6cpwe" path="res://Camera2D.gd" id="7_0roct"]
+[ext_resource type="Script" uid="uid://lle23s6w1x2d" path="res://Camera2D.gd" id="7_0roct"]
 [ext_resource type="Texture2D" uid="uid://ddkr158wponll" path="res://Assets/UI/bosspng.png" id="7_vm4q1"]
+[ext_resource type="AudioStream" uid="uid://nmsdtw5f05ov" path="res://Assets/Sounds/title_bgm.mp3" id="9_ud676"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -215,3 +216,7 @@ texture_normal = ExtResource("7_vm4q1")
 position = Vector2(392, 670)
 zoom = Vector2(2, 2)
 script = ExtResource("7_0roct")
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ud676")
+autoplay = true

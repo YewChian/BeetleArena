@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://kk2asmgd6tvj"]
+[gd_scene load_steps=25 format=3 uid="uid://kk2asmgd6tvj"]
 
 [ext_resource type="Script" uid="uid://cwh65nn485hkw" path="res://UI/StartRunScene.gd" id="1_jv30d"]
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_rwjul"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://b5akp8ch011e3" path="res://Legs/StagBeetleLegs/StagBeetleLeftLeg.tscn" id="16_1peb4"]
 [ext_resource type="PackedScene" uid="uid://03jx71jb2mtw" path="res://Legs/StagBeetleLegs/StagBeetleRightLeg.tscn" id="17_cb01e"]
 [ext_resource type="Script" uid="uid://cx8hyi2dexys8" path="res://UI/Checkbox.gd" id="21_ctnba"]
+[ext_resource type="AudioStream" uid="uid://nmsdtw5f05ov" path="res://Assets/Sounds/title_bgm.mp3" id="22_nqy4h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mh8s"]
 
@@ -166,6 +167,10 @@ script = ExtResource("21_ctnba")
 layout_mode = 2
 text = "BUG OUT!!!"
 script = ExtResource("6_k3mop")
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_nqy4h")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle1Button" to="MarginContainer/HBoxContainer/SelectBeetle1Button" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/SelectBeetle2Button" to="MarginContainer/HBoxContainer/SelectBeetle2Button" method="_on_pressed"]

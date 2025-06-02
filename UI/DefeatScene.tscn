@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5b8rohplp5hx"]
+[gd_scene load_steps=9 format=3 uid="uid://b5b8rohplp5hx"]
 
 [ext_resource type="Script" uid="uid://fiy7xoblaeu8" path="res://UI/VictoryDefeatScreen.gd" id="1_4pkve"]
 [ext_resource type="Texture2D" uid="uid://c7rl4g3man7or" path="res://Assets/Backgrounds/losescreen.png" id="2_4pkve"]
+[ext_resource type="AudioStream" uid="uid://cuov00im75yge" path="res://Assets/Sounds/wingame.wav" id="3_6rv4w"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2lyr"]
 
@@ -13,7 +14,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5n5y"]
 
-[node name="VictoryScene" type="CanvasLayer"]
+[node name="DefeatScene" type="CanvasLayer"]
 script = ExtResource("1_4pkve")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -36,5 +37,9 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lfkof")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_us00d")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k0dwt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_b5n5y")
+
+[node name="OnReadySound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_6rv4w")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

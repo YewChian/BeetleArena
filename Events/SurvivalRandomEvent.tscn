@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvdfhpgj25frt"]
+[gd_scene load_steps=5 format=3 uid="uid://dvdfhpgj25frt"]
 
 [ext_resource type="Theme" uid="uid://b66cxik023bhq" path="res://WoodenTheme.tres" id="1_vx5s8"]
 [ext_resource type="Script" uid="uid://b7p7fn4vw2ej5" path="res://Events/SurvivalRandomEvent.gd" id="2_vx5s8"]
 [ext_resource type="Texture2D" uid="uid://caedh6vl5fuvg" path="res://Assets/Backgrounds/SURVIVALOFTHEFITTEST.png" id="3_vx5s8"]
+[ext_resource type="AudioStream" uid="uid://gucv8pt2vkpe" path="res://Assets/Sounds/random_encounter_bgm.mp3" id="4_hpg2l"]
 
 [node name="SurvivalRandomEvent" type="Control"]
 layout_mode = 3
@@ -49,6 +50,10 @@ theme = ExtResource("1_vx5s8")
 unique_name_in_owner = true
 layout_mode = 2
 text = "A FIGHT BREAKS OUT"
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hpg2l")
+autoplay = true
 
 [connection signal="confirmed" from="CanvasLayer/EndDialog" to="." method="_on_end_dialog_confirmed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/VBoxContainer/AFightBreaksOut" to="." method="_on_a_fight_breaks_out_pressed"]

@@ -8,4 +8,4 @@ func initialise_stats():
 	assert(part_name != "")		# part name should be found in PartsInfo.name_to_path
 	base_spd = 2
 	aggro_spd = 20
-	right_leg = load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilLeftLeg.tscn")
+	right_leg = load("res://Legs/GiraffeWeevilLegs/GiraffeWeevilRightLeg.tscn")

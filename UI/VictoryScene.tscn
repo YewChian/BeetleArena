@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://f6ewvi56tcrf"]
+[gd_scene load_steps=9 format=3 uid="uid://f6ewvi56tcrf"]
 
 [ext_resource type="Script" uid="uid://fiy7xoblaeu8" path="res://UI/VictoryDefeatScreen.gd" id="1_a2lyr"]
 [ext_resource type="Texture2D" uid="uid://d038307sy3es7" path="res://Assets/Backgrounds/winscreen.png" id="1_ui728"]
+[ext_resource type="AudioStream" uid="uid://ct4h03oy0ov8l" path="res://Assets/Sounds/losegame.wav" id="3_lfkof"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2lyr"]
 
@@ -36,5 +37,9 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lfkof")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_us00d")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_k0dwt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_b5n5y")
+
+[node name="OnReadySound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_lfkof")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
