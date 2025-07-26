@@ -26,8 +26,10 @@ func _on_endure_pressed() -> void:
 		
 	else:
 		main_beetle.enhance_with_shrine()
-		%EndDialog.visible = true
-		%EndDialog.dialog_text = str(main_beetle.nickname) + " gains 1 endurance."
+		
+		%GainEnduranceDialog.visible = true
+		%GainEnduranceDialog.dialog_text = str(main_beetle.nickname) + " gains 1 endurance."
+		burn_percentage = max(0.9, burn_percentage + 0.2)
 		
 
 func _on_leave_pressed() -> void:
@@ -49,6 +51,9 @@ func _on_element_pressed(element):
 	%Endure.set_deferred("disabled", false)
 	
 
-
 func _on_end_dialog_confirmed() -> void:
 	get_tree().change_scene_to_file("res://Map.tscn")
+
+
+func _on_gain_endurance_dialog_confirmed() -> void:
+	%GainEnduranceDialog.visible = false

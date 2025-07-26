@@ -96,7 +96,7 @@ var enemy_beetles_per_difficulty = {
 			"nature": "Brave",
 			"bonus_end": 0,
 			"bonus_str": 0,
-			"bonus_spd": 3,	
+			"bonus_spd": -1,	
 		},
 	} 
 

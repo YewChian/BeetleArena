@@ -36,7 +36,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Returntomain" parent="UI" instance=ExtResource("7_0jb3m")]
-visible = false
 offset_left = -3788.0
 offset_top = -2649.0
 offset_right = -3788.0

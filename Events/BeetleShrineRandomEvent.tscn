@@ -24,6 +24,12 @@ unique_name_in_owner = true
 initial_position = 1
 theme = ExtResource("3_jbtgn")
 
+[node name="GainEnduranceDialog" type="AcceptDialog" parent="CanvasLayer"]
+unique_name_in_owner = true
+auto_translate_mode = 1
+initial_position = 1
+theme = ExtResource("3_jbtgn")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,5 +75,6 @@ stream = ExtResource("4_ty8pf")
 autoplay = true
 
 [connection signal="confirmed" from="CanvasLayer/EndDialog" to="." method="_on_end_dialog_confirmed"]
+[connection signal="confirmed" from="CanvasLayer/GainEnduranceDialog" to="." method="_on_gain_endurance_dialog_confirmed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/VBoxContainer/Endure" to="." method="_on_endure_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/VBoxContainer/Leave" to="." method="_on_leave_pressed"]
