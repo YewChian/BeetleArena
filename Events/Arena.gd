@@ -144,6 +144,7 @@ func _ready():
 	match ArenaInfo.current_difficulty:
 		0:	
 			%ArenaBGM.stream = load("res://Assets/Sounds/arena_0_bgm.mp3")
+			%ArenaBGM.volume_db = -15
 		1:
 			%ArenaBGM.stream = load("res://Assets/Sounds/arena_1_bgm.mp3")
 		2:
@@ -172,6 +173,8 @@ func initialize_player_beetles():
 		new_beetle.team = 0
 		add_child(new_beetle)
 		new_beetle.global_position = Vector2(1280, 0)
+		new_beetle.direction = Vector2(1,1).normalized()
+		new_beetle.rotation = new_beetle.direction.angle() + PI/2
 		var healthbar_container = load("res://UI/ArenaHealthbarContainer.tscn").instantiate()
 		$UI/HealthbarVBox.add_child(healthbar_container)
 		healthbar_container.beetle =  new_beetle
@@ -186,8 +189,8 @@ func initialize_player_beetles():
 		new_beetle = Inventory.assemble_beetle(nickname, enemy_inventory[nickname])
 		add_child(new_beetle)
 		new_beetle.global_position = Vector2(-1240, 0)
-		new_beetle.direction = Vector2(1,0)
-		new_beetle.rotation_degrees = 90
+		new_beetle.direction = Vector2(-1,-1).normalized()
+		new_beetle.rotation = new_beetle.direction.angle() + PI/2
 		new_beetle.team = 1
 		var healthbar_container = load("res://UI/ArenaHealthbarContainer.tscn").instantiate()
 		$UI/HealthbarVBox.add_child(healthbar_container)

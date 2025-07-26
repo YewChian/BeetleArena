@@ -1,5 +1,7 @@
 extends Camera2D
 
+const CAMERA_UPPER_BOUNDS = 60
+const CAMERA_LOWER_BOUNDS = 640
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,10 +16,10 @@ func _input(event):
 	if event is InputEventMouse:
 		var mouse_event = event as InputEventMouse
 		# Check if the mouse wheel moved up
-		if mouse_event.is_action("mouse_wheel_up"):
+		if mouse_event.is_action("mouse_wheel_up") and position.y > CAMERA_UPPER_BOUNDS:
 			move_camera_up()
 		# Check if the mouse wheel moved down
-		elif mouse_event.is_action("mouse_wheel_down"):
+		elif mouse_event.is_action("mouse_wheel_down") and position.y < CAMERA_LOWER_BOUNDS:
 			move_camera_down()
 
 func move_camera_up():

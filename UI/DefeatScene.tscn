@@ -41,5 +41,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_b5n5y")
 [node name="OnReadySound" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_6rv4w")
+volume_db = 20.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
